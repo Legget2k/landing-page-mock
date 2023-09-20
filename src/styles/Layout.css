@@ -1,0 +1,15 @@
+body{
+      height: 100vh;
+      background-color: #202020;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+}
+
+.web-container{
+      display: flex;
+      max-width: 1600px;
+      width: 100%;
+      flex-wrap: wrap;
+
+}
