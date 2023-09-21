@@ -1,7 +1,8 @@
 ---
 import '../styles/Layout.css';
 import '../styles/normalize.css';
-import NavBar from '../components/landing/NavBar';
+import Hero from '../components/landing/Hero';
+import NavBar from '../components/nav/NavBar';
 ---
 
 <!DOCTYPE html>
@@ -12,10 +13,15 @@ import NavBar from '../components/landing/NavBar';
       <title>Astro Landing</title>
 </head>
 <body>
+      
       <div class="web-container">
 
-            <NavBar />
-            
+            <NavBar/>
+
+            <main>
+                  <Hero/>
+                  
+            </main>
             
             <slot/>
       </div>
