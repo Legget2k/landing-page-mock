@@ -11,15 +11,12 @@ function Navbar() {
 
       <header>
         
-        <div>
-          <Logo />
-        </div>
+        <Logo />
+
 
         <nav>
-
-          <Links />
-
           <Hamb />
+          <Links />
         </nav>
       </header>
 
