@@ -1,25 +1,26 @@
 import React from 'react';
-import Links from "./Link";
+import LinkCollection from "./LinkCollection";
 import Logo from "./logo";
 import Hamb from "./hamburguer";
 import '../../styles/Layout.css';
-function Navbar() {
 
+
+function Navbar() {
+  const links = [
+    {"name": "Home", "description": "Home Description", "url": "/"},
+    {"name": "My Work", "description": "My Work Description", "url": "/work"},
+    {"name": "Blog", "description": "Blog Description", "url": "/blog"},
+    {"name": "About Me", "description": "About Me Description", "url": "/about"}];
 
   return (
     <>
-
-      <header>
-        
+      <header>       
         <Logo />
-
-
         <nav>
           <Hamb />
-          <Links />
+          <LinkCollection linkList={links} />
         </nav>
       </header>
-
     </>
   );
 }
