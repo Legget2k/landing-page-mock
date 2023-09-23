@@ -1,17 +1,15 @@
-import React from 'react';
+import React from 'react'
+import LinkComponent from './linkComponent';
 
-function Link() {
-
-  const names = ["Home", "My Work", "Blog", "About Me"];
+const Link = (linksFromNavBar) => {
 
   return (
     <>
-      <ul className='nav-bar'>
-        { names.map( name => <li><a href={`../pages/${name}`}> {name} </a></li> ) } 
+      <ul>
+        <LinkComponent links={linksFromNavBar.links} />
       </ul>
     </>
   )
 }
-
 
 export default Link;

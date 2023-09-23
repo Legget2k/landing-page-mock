@@ -71,19 +71,25 @@ main{
 }
 
 /*component/nav/Link.jsx ul*/
-.nav-bar{ 
-      display: flex;
-}
 
-.nav-bar > li{
-      margin: 15px;
+.descripcion {
+      display: none; /* Oculta la descripción por defecto */
+      position: absolute;
+      background-color: #f0f0f0;
       padding: 5px;
-      cursor: pointer;
-}
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      z-index: 1;
+    }
+    
+    a:hover .descripcion {
+      display: block; /* Muestra la descripción cuando se hace hover sobre el enlace */
+    }
 
-.nav-bar > li:hover{
-      outline: 1px solid #ffffff16;
-}
+
+
+
+
 
 /*component/nav/hamburguer.jsx*/
 #check, .checkBtn{
