@@ -71,25 +71,24 @@ main{
 }
 
 /*component/nav/Link.jsx ul*/
+.link-container{
+      display: flex;
+}
+/*component/nav/linkComponent li>a*/
+.link-container > li{
+      margin: 15px;
+}
 
-.descripcion {
-      display: none; /* Oculta la descripción por defecto */
+.description{
+      display: none;
       position: absolute;
+      top: 100%;
+      left: 0;
       background-color: #f0f0f0;
       padding: 5px;
       border: 1px solid #ccc;
-      border-radius: 3px;
-      z-index: 1;
-    }
-    
-    a:hover .descripcion {
-      display: block; /* Muestra la descripción cuando se hace hover sobre el enlace */
-    }
-
-
-
-
-
+      border-radius: 4px;
+}
 
 /*component/nav/hamburguer.jsx*/
 #check, .checkBtn{

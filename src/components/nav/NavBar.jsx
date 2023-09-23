@@ -4,8 +4,9 @@ import Links from "./Link";
 import Logo from "./Logo";
 import Hamb from "./Hamburguer";
 import '../../styles/Layout.css';
-function Navbar() {
 
+
+function Navbar() {
   const [links, setLinks] = useState([
     {name: "Home", description: "Home Description", url: "/"},
     {name: "My Work", description: "My Work Description", url: "/work"},
