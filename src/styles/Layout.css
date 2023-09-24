@@ -79,15 +79,14 @@ main{
       margin: 15px;
 }
 
+/*components/nav/LinkDescription/*/
 .description{
       display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f0f0f0;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      background-color: aqua;
+}
+
+.show{
+      display: block;
 }
 
 /*component/nav/hamburguer.jsx*/
@@ -107,8 +106,6 @@ main{
       border-radius: 20px;
       margin-top: 50px;
 }
-
-
 
 @media (max-width: 768px) {
       .checkBtn{

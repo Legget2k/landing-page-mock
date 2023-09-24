@@ -1,41 +1,33 @@
 import React from 'react';
-import {useState} from 'react';
-import '../../styles/Layout.css';
+import { useState } from 'react';
+import Description from './LinkDescription';
 
 
 function LinkComponent({ links }) {
   
-  const [hoverIndex, setHoverIndex] = useState(null);
-
-  function handleMouseEnter(){
-    setHoverIndex(index);
+  /*state and events for descriptions*/
+  const [isHovered, setIsHovered] = useState(null);
+  function handleMouseEnter(index) {
+    setIsHovered(index);
+  }
+  function handleMouseLeave() {
+    setIsHovered(null);
   }
 
-  function handleMouseLeave(){
-    setHoverIndex(null);
-  }
-
-  function linksRender() {
-
-    const rendering = links.map((link, index) => (
-
-      <li key={index}>
-        <a href={link.url} onMouseEnter={ () => handleMouseEnter(index) }
-                          onMouseLeave={ handleMouseLeave }>
-          {link.name}
-          {hoverIndex === index && <span className='description'>{link.description}</span>}
-        </a>
+  function renderLinks(links) {
+    return links.map((link, index) => (
+      <li
+        key={index}
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={handleMouseLeave}
+      >
+        <a href={link.url}>{link.name}</a>
+        <Description description={link.description} hover={isHovered === index} />
       </li>
     ));
-
-    return rendering; 
   }
 
-  return (
-    <>
-      {linksRender()}
-    </>
-  );
+  return <>{renderLinks(links)}</>;
 }
 
 export default LinkComponent;
