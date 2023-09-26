@@ -8,10 +8,10 @@ import '../../styles/Layout.css';
 
 function Navbar() {
   const [links, setLinks] = useState([
-    {name: "Home", description: "Home Description", url: "/"},
-    {name: "My Work", description: "My Work Description", url: "/work"},
-    {name: "Blog", description: "Blog Description", url: "/blog"},
-    {name: "About Me", description: "About Me Description", url: "/about"}
+    {name: "Home",      description: "Home Description",      url: "/"},
+    {name: "My Work",   description: "My Work Description",   url: "/work"}, 
+    {name: "Blog",      description: "Blog Description",      url: "/blog"},
+    {name: "About Me",  description: "About Me Description",  url: "/about"}
   ]);
 
   return (
@@ -23,9 +23,10 @@ function Navbar() {
 
 
         <nav>
-          <Hamb />
 
+          <Hamb /> 
           <Links links={links}/>
+          
         </nav>
       </header>
 

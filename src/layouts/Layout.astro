@@ -1,7 +1,7 @@
 ---
 import '../styles/Layout.css';
 import '../styles/normalize.css';
-import Hero from '../components/landing/Hero';
+import Footer from '../components/footer/Footer';
 import NavBar from '../components/nav/NavBar';
 ---
 
@@ -18,14 +18,11 @@ import NavBar from '../components/nav/NavBar';
       <div class="web-container">
 
             <NavBar client:load/>   
-            <!-- <main>
-                  <Hero/>
-                  
-            </main> -->
             
             
             <slot/>
 
+            <Footer/>
       </div>
 
 </body>
