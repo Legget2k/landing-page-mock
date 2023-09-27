@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Links from "./Link";
 import Logo from "./Logo";
 import Hamb from "./Hamburguer";
-import '../../styles/Layout.css';
+import '../../styles/main.css';
 
 
 function Navbar() {
