@@ -11,11 +11,11 @@ function Footer() {
   return (
     <footer>
       <section className="media-containers">
-        <Media media={mediaIcons}/>
+        <MediaRender media={mediaIcons}/>
       </section>
       <section className="info-Container">
         <hr />
-        <h3>Kigen Games LL</h3>
+        <h3>Kigen Games LLS</h3>
         <span>© 2023  Kigen Games</span>
       </section>
     </footer>
