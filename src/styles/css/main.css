@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*sass index.scss ../css/main.css for transpilation*/
 * {
   margin: 0;
@@ -89,8 +90,6 @@ header nav .link-container {
   header nav .link-container li {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 60px;
     border: 1px solid #ccc;
@@ -100,7 +99,6 @@ header nav .link-container {
   header nav .link-container li a {
     height: 100%;
     width: 100%;
-    font-size: 2.5rem;
   }
   header nav #check:checked ~ .link-container {
     position: absolute;
@@ -122,6 +120,26 @@ header nav .link-container {
     top: 0;
     right: 0;
   }
+  header nav .checkBtn div {
+    width: 25px;
+    height: 3px;
+    background-color: #e1e1e1;
+    margin: 4px 0;
+    transition: background-color 0.3s ease; /* Agregamos una transición para el color de fondo */
+  }
+  header nav .open div {
+    background-color: rgba(225, 225, 225, 0.7529411765);
+  }
+}
+/*sass index.scss ../css/main.css for transpilation*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  border-top: 1px solid #270063;
+  gap: 30px;
+  background-color: #5500d4;
 }
 
 /*# sourceMappingURL=main.css.map */

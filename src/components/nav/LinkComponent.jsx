@@ -21,8 +21,9 @@ function LinkComponent({ links }) {
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
       >
-        <a href={link.url}>{link.name}</a>
-        <Description description={link.description} hover={isHovered === index} />
+        <a href={link.url}>{link.name}
+          <Description description={link.description} hover={isHovered === index} />
+        </a>
       </li>
     ));
   }
