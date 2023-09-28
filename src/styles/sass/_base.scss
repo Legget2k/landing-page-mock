@@ -1,6 +1,9 @@
-$primary-color: #181212;
+$primary-color: #e1e1e1;
 $secundary-color: #b62828;
 $contrast-color: #6fe40f;
+$primary-bg-color: #270063;
+$secundary-bg-color: #202020;
+$contrast-bg-color: #5500d4;
 *{
       margin: 0;
       padding: 0;
@@ -8,37 +11,31 @@ $contrast-color: #6fe40f;
 }
 
 h1,h2,h3,h4,h5,h6{
-      margin: 0;
-      color: $secundary-color;
       font-weight: bolder;
 }
 
 p{
-      color: var(--prim-color);
       text-align: center;
-      margin-top: 50px;
 }
 
 li{list-style: none;}
 
 a{
       text-decoration: none;
-      color: $secundary-color;
+      color: $primary-color;
 }
 
 body{
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      background-color: $primary-color;
+      background-color: $primary-bg-color;
 
       .web-container{ 
             display: flex;
+            flex-wrap: wrap;
             max-width: 1280px;
             width: 100%;
-            flex-wrap: wrap;
-            position: relative;
+            background-color: $secundary-bg-color;
       }
 }

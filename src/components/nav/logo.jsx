@@ -1,10 +1,9 @@
 import React from 'react';
-import '../../styles/Layout.css';
 
 
 function logo() {
   return (
-    <div className='logo'>
+    <div className='logo-container'>
       <a href="#"><h3>Logo</h3></a>
     </div>
   )

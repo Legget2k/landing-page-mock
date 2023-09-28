@@ -6,15 +6,11 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  color: #b62828;
   font-weight: bolder;
 }
 
 p {
-  color: var(--prim-color);
   text-align: center;
-  margin-top: 50px;
 }
 
 li {
@@ -23,77 +19,109 @@ li {
 
 a {
   text-decoration: none;
-  color: #b62828;
+  color: #e1e1e1;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  background-color: #181212;
+  background-color: #270063;
 }
 body .web-container {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1280px;
   width: 100%;
-  flex-wrap: wrap;
-  position: relative;
+  background-color: #202020;
 }
 
+/*sass index.scss ../css/main.css for transpilation*/
 header {
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
+  justify-items: center;
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #5500d4;
+}
+header .logo-container {
+  display: flex;
   align-items: center;
 }
 header nav {
   display: flex;
   align-items: center;
 }
-header nav .logo {
-  font-size: 2.5rem;
-}
 header nav .link-container {
   display: flex;
+  align-items: center;
   user-select: none;
-}
-header nav .link-container li {
-  margin: 15px;
-  font-size: 1.5em;
-}
-
-main {
-  width: 100%;
-  height: 100vh;
-}
-
-.link-container > .link-container > li:hover {
-  background-color: var(--prim-bg);
-}
-
-.link-container > li > a {
-  display: block;
+  gap: 20px;
 }
 
 .description {
   display: none;
-  background-color: var(--prim-bg);
   user-select: none;
   position: absolute;
   border-radius: 20px;
   font-size: 12px;
-  color: var(--prim-color);
+  color: #e1e1e1;
 }
 
 .show {
   display: flex;
-  flex-flow: flex-end;
 }
 
 #check, .checkBtn {
   display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 30px;
+  }
+  header nav .link-container {
+    display: none;
+  }
+  header nav .link-container li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ccc;
+    color: #e1e1e1;
+    background-color: #5500d4;
+  }
+  header nav .link-container li a {
+    height: 100%;
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  header nav #check:checked ~ .link-container {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #270063;
+  }
+  header nav .checkBtn {
+    align-self: flex-start;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    color: #e1e1e1;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
