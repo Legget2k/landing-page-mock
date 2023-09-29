@@ -50,6 +50,8 @@ header{
             padding: 0 30px;
             
             nav{
+                  align-self: center;
+
                   .link-container{
                         display: none;
 
@@ -58,19 +60,23 @@ header{
                               flex-wrap: wrap;
                               width: 100%;
                               height: 60px;
-                              border: 1px solid #ccc;
+                              border-bottom: 1px solid #ccc;
                               color: base.$primary-color;
                               background-color: base.$contrast-bg-color;
                               a{    
                                     height: 100%;
                                     width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    flex-wrap: wrap-reverse;
                               }
                         }
                   }
 
                   #check:checked ~ .link-container{
                         position: absolute;
-                        top: 25px;
+                        top: 100%;
                         left: 0;    
                         gap: 0;
                         display: flex;

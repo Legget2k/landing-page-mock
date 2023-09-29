@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import LinkComponent from './linkComponent';
 
 
-const Link = (linksFromNavBar) => {
-
+const Link = ( linksFromNavBar ) => { //props
   return (
     <>
       <ul className='link-container'>

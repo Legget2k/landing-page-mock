@@ -3,8 +3,7 @@ import { useState } from 'react';
 import Description from './LinkDescription';
 
 
-function LinkComponent({ links }) {
-  
+function LinkComponent( { links } ) {
   /*state and events for descriptions*/
   const [isHovered, setIsHovered] = useState(null);
   function handleMouseEnter(index) {
@@ -15,7 +14,7 @@ function LinkComponent({ links }) {
   }
 
   function renderLinks(links) {
-    return links.map((link, index) => (
+    return links.map( (link, index /*link.id*/) => (
       <li
         key={index}
         onMouseEnter={() => handleMouseEnter(index)}
