@@ -30,23 +30,32 @@ a {
 body {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
   background-color: #270063;
 }
 body .web-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
   max-width: 1280px;
   width: 100%;
+  padding: 0 30px;
   background-color: #202020;
 }
 
 /*sass index.scss ../css/main.css for transpilation*/
 header {
-  align-self: flex-start;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  justify-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-self: flex-start;
   width: 100%;
   position: sticky;
   top: 0;

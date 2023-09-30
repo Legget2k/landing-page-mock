@@ -1,12 +1,72 @@
+//var section
 //Vars colors for texts
-$primary-color: #e1e1e1;
-$secundary-color: #b62828;
-$contrast-color: #6fe40f;
+$primary-color: #e1e1e1; //use for the mostly things in web
+$secundary-color: #b62828; //use for things that are not so important
+$contrast-color: #6fe40f; //use for remark things 
 
 //Vars colors for backgrounds
 $primary-bg-color: #270063;
 $secundary-bg-color: #202020;
 $contrast-bg-color: #5500d4;
+
+//mixin section
+@mixin flex($direction: row, $justify: center, $align-items: center, $align-content: center, $wrap: wrap) {
+      display: flex;
+    
+      @if $direction == row {
+        flex-direction: row;
+      } @else if $direction == column {
+        flex-direction: column;
+      }
+    
+      @if $justify == start {
+        justify-content: flex-start;
+      } @else if $justify == center {
+        justify-content: center;
+      } @else if $justify == end {
+        justify-content: flex-end;
+      } @else if $justify == space-between {
+        justify-content: space-between;
+      } @else if $justify == space-around {
+        justify-content: space-around;
+      } @else if $justify == space-evenly {
+        justify-content: space-evenly;
+      }
+    
+      @if $align-items == start {
+        align-items: flex-start;
+      } @else if $align-items == center {
+        align-items: center;
+      } @else if $align-items == end {
+        align-items: flex-end;
+      } @else if $align-items == stretch {
+        align-items: stretch;
+      } @else if $align-items == baseline {
+        align-items: baseline;
+      }
+    
+      @if $align-content == start {
+        align-content: flex-start;
+      } @else if $align-content == center {
+        align-content: center;
+      } @else if $align-content == end {
+        align-content: flex-end;
+      } @else if $align-content == space-between {
+        align-content: space-between;
+      } @else if $align-content == space-around {
+        align-content: space-around;
+      } @else if $align-content == stretch {
+        align-content: stretch;
+      }
+    
+      @if $wrap == wrap {
+        flex-wrap: wrap;
+      } @else if $wrap == nowrap {
+        flex-wrap: nowrap;
+      } @else if $wrap == wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    }
 
 //general styles
 *{
@@ -36,15 +96,14 @@ a{
 
 body{
       width: 100%;
-      display: flex;
-      justify-content: center;
+      @include flex(row, center, nowrap);
       background-color: $primary-bg-color;
 
       .web-container{ 
-            display: flex;
-            flex-wrap: wrap;
+            @include flex(column, center, wrap);
             max-width: 1280px;
             width: 100%;
+            padding: 0 30px;
             background-color: $secundary-bg-color;
       }
 }
