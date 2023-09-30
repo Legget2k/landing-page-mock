@@ -10,7 +10,7 @@ $secundary-bg-color: #202020;
 $contrast-bg-color: #5500d4;
 
 //mixin section
-@mixin flex($direction: row, $justify: center, $align-items: center, $align-content: center, $wrap: wrap) {
+@mixin flex($direction: row, $justify: start, $align-items: start, $align-content: start, $wrap: nowrap) {
       display: flex;
     
       @if $direction == row {

@@ -8,17 +8,14 @@ header{
       background-color: base.$contrast-bg-color;
 
       .logo-container{
-            display: flex;
-            align-items: center;
+            @include base.flex();
       }
 
       nav{
-            display: flex;
-            align-items: center;
+            @include base.flex();
 
             .link-container{
-                  display: flex;
-                  align-items: center;
+                  @include base.flex();
                   user-select: none;
                   gap: 20px;
             }

@@ -32,16 +32,16 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-wrap: nowrap;
   background-color: #270063;
 }
 body .web-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-wrap: nowrap;
   max-width: 1280px;
   width: 100%;
   padding: 0 30px;
@@ -53,8 +53,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-wrap: nowrap;
   align-self: flex-start;
   width: 100%;
   position: sticky;
@@ -63,15 +63,27 @@ header {
 }
 header .logo-container {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
 }
 header nav {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
 }
 header nav .link-container {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
   user-select: none;
   gap: 20px;
 }
