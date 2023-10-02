@@ -45,7 +45,6 @@ body .web-container {
 header {
   align-self: flex-start;
   display: flex;
-  justify-content: space-between;
   justify-items: center;
   width: 100%;
   position: sticky;

@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Links from "./Link";
 import Logo from "./Logo";
 import Hamb from "./Hamburguer";
 import '../../styles/css/main.css';
 
 
-const links =[
-  {name: "Home",      description: "Home Description",      url: "/",}, //id
-  {name: "My Work",   description: "My Work Description",   url: "/work"}, 
-  {name: "Blog",      description: "Blog Description",      url: "/blog"},
-  {name: "About Me",  description: "About Me Description",  url: "/about"}
-];
 function Navbar() {
+  const [links, setLinks] = useState([]);
+  const [areLinksRendered, setAreLinksRendered] = useState(false);
+
+  useEffect(() => {
+    const newData = [];
+    /*the links should have 3 properties for rendering name: url: and description:*/
+  
+    setLinks(newData);
+    setAreLinksRendered(newData.length > 0);
+  }, []);
+
   return (
     <>
-      <header>
-        <Logo/>
+      <header style={{ justifyContent: areLinksRendered ? 'space-between' : 'center' }}>
+        <Logo />
         <nav>
-          <Hamb/> 
-          <Links links={links}/>
+          {areLinksRendered && (
+            <>
+              <Hamb />
+              <Links links={links} />
+            </>
+          )}
         </nav>
       </header>
     </>
