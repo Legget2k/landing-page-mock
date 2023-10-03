@@ -1,10 +1,13 @@
 import React from 'react';
+import KigenLogo from '../../assets/kigenLogo-light.png';
 
 
 function logo() {
   return (
     <div className='logo-container'>
-      <a href="#"><h3>Logo</h3></a>
+      <a href="/">
+        <img src={KigenLogo} alt="Logo" />
+      </a>
     </div>
   )
 }
