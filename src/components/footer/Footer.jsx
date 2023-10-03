@@ -9,12 +9,12 @@ function Footer() {
   ];
 
   return (
-    <footer>
-      <section className="media-container">
+    <footer className='footer'>
+      <section className="footer__media-container">
         <MediaRender media={mediaIcons}/>
       </section>
 
-      <section className={`info-container`}>
+      <section className={`footer__info-container`}>
         <h3>Kigen Games LLS</h3>
         <hr />
         <span>Kigen Games © 2023</span>

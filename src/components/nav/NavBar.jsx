@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Links from "./Link";
+import Links from "./LinkContainer";
 import Logo from "./Logo";
 import Hamb from "./Hamburguer";
 import '../../styles/css/main.css';
@@ -10,7 +10,9 @@ function Navbar() {
   const [areLinksRendered, setAreLinksRendered] = useState(false);
 
   useEffect(() => {
-    const newData = [];
+    const newData = [
+      // {name: "inicio", url: "/", description: "home description"}
+    ];
     /*the links should have 3 properties for rendering name: url: and description:*/
   
     setLinks(newData);
@@ -19,9 +21,10 @@ function Navbar() {
 
   return (
     <>
-      <header style={{ justifyContent: areLinksRendered ? 'space-between' : 'center' }}>
-        <Logo />
-        <nav>
+      <header style={{ justifyContent: areLinksRendered ? 'space-between' : 'center' }} className='header'>
+
+        <Logo className="header__logo"/>
+        <nav className='header__nav'>
           {areLinksRendered && (
             <>
               <Hamb />

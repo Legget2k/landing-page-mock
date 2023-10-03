@@ -29,10 +29,10 @@ function Hamburguer() {
   return (
     <>
       <input type="checkbox" id="check" checked={isOpen} onChange={toggleMenu} />
-      <label htmlFor="check" className={`checkBtn ${isOpen ? 'open' : ''}`}>
-        <div></div>
-        <div></div>
-        <div></div>
+      <label htmlFor="check" className={`header__checkBtn ${isOpen ? 'header__checkBtn--open' : ''}`}>
+        <div className='header__checkBtn-animationBar'></div>
+        <div className='header__checkBtn-animationBar'></div>
+        <div className='header__checkBtn-animationBar'></div>
       </label>
     </>
   );

@@ -16,11 +16,14 @@ function LinkComponent( { links } ) {
   function renderLinks(links) {
     return links.map( (link, index /*link.id*/) => (
       <li
+        className='header__links-container-item'
         key={index}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
       >
-        <a href={link.url}>{link.name}
+        <a href={link.url}
+           className='header__links-container-link'>
+            {link.name}
           <Description description={link.description} hover={isHovered === index} />
         </a>
       </li>

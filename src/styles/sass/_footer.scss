@@ -1,6 +1,6 @@
 @use 'base';
 
-footer{
+.footer{
       color: base.$primary-color;
       display: flex;
       flex-direction: column;
@@ -12,21 +12,21 @@ footer{
       padding: 20px 0;
 
       
-      .media-container{
+      &__media-container{
             display: flex;
             gap: 20px;
       }
-      .info-container{
+      &__info-container{
             text-align: end;
       }
 
 }
 
 @media (max-width: 768px) {
-      footer{
+      .footer{
             align-items: center;
 
-            .info-container{
+            &__info-container{
                   text-align: center;
             }
       }     

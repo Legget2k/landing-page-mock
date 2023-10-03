@@ -45,7 +45,7 @@ body .web-container {
 }
 
 /*sass index.scss ../css/main.css for transpilation*/
-header {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,7 +57,7 @@ header {
   top: 0;
   background-color: #5500d4;
 }
-header .logo-container {
+.header__logo-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -65,7 +65,7 @@ header .logo-container {
   align-content: flex-start;
   flex-wrap: nowrap;
 }
-header nav {
+.header__nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -73,7 +73,7 @@ header nav {
   align-content: flex-start;
   flex-wrap: nowrap;
 }
-header nav .link-container {
+.header__nav .link-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -102,16 +102,16 @@ header nav .link-container {
 }
 
 @media (max-width: 768px) {
-  header {
+  .header {
     padding: 0 30px;
   }
-  header nav {
+  .header__nav {
     align-self: center;
   }
-  header nav .link-container {
+  .header__nav .header__link-container {
     display: none;
   }
-  header nav .link-container li {
+  .header__nav .header__link-container-item {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -120,7 +120,7 @@ header nav .link-container {
     color: #e1e1e1;
     background-color: #5500d4;
   }
-  header nav .link-container li a {
+  .header__nav .header__link-container-item-link {
     height: 100%;
     width: 100%;
     display: flex;
@@ -128,7 +128,7 @@ header nav .link-container {
     justify-content: center;
     flex-wrap: wrap-reverse;
   }
-  header nav #check:checked ~ .link-container {
+  .header__nav #check:checked ~ .header__link-container {
     position: absolute;
     top: 100%;
     left: 0;
@@ -139,7 +139,7 @@ header nav .link-container {
     background-color: #270063;
     transition: all 0.3s;
   }
-  header nav .checkBtn {
+  .header__nav .header__checkBtn {
     align-self: flex-start;
     display: block;
     cursor: pointer;
@@ -149,19 +149,19 @@ header nav .link-container {
     top: 0;
     right: 0;
   }
-  header nav .checkBtn div {
+  .header__nav .header__checkBtn-animationBar {
     width: 25px;
     height: 3px;
     background-color: #e1e1e1;
     margin: 4px 0;
     transition: background-color 0.3s ease; /* Agregamos una transición para el color de fondo */
   }
-  header nav .open div {
-    background-color: rgba(225, 225, 225, 0.7529411765);
+  .header__nav .header__checkBtn--open .header__checkBtn-animationBar {
+    background-color: #202020;
   }
 }
 /*sass index.scss ../css/main.css for transpilation*/
-footer {
+.footer {
   color: #e1e1e1;
   display: flex;
   flex-direction: column;
@@ -172,19 +172,19 @@ footer {
   background-color: #5500d4;
   padding: 20px 0;
 }
-footer .media-container {
+.footer__media-container {
   display: flex;
   gap: 20px;
 }
-footer .info-container {
+.footer__info-container {
   text-align: end;
 }
 
 @media (max-width: 768px) {
-  footer {
+  .footer {
     align-items: center;
   }
-  footer .info-container {
+  .footer__info-container {
     text-align: center;
   }
 }

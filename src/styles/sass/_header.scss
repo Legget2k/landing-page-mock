@@ -1,7 +1,7 @@
 @use 'base';
 
 
-header{
+.header{
       @include base.flex(row, space-between, wrap);
       align-self: flex-start;
       width: 100%;
@@ -9,11 +9,11 @@ header{
       top: 0;
       background-color: base.$contrast-bg-color;
 
-      .logo-container{
+      &__logo-container{
             @include base.flex();
       }
 
-      nav{
+      &__nav{
             @include base.flex();
 
             .link-container{
@@ -43,16 +43,16 @@ header{
 }
 @media (max-width: 768px) {
 
-      header{
+      .header{
             padding: 0 30px;
             
-            nav{
+            &__nav{
                   align-self: center;
-
-                  .link-container{
+                  
+                  .header__link-container{
                         display: none;
 
-                        li {
+                        &-item{
                               display: flex;
                               flex-wrap: wrap;
                               width: 100%;
@@ -60,7 +60,8 @@ header{
                               border-bottom: 1px solid #ccc;
                               color: base.$primary-color;
                               background-color: base.$contrast-bg-color;
-                              a{    
+                              
+                              &-link{    
                                     height: 100%;
                                     width: 100%;
                                     display: flex;
@@ -71,7 +72,7 @@ header{
                         }
                   }
 
-                  #check:checked ~ .link-container{
+                  #check:checked ~ .header__link-container{
                         position: absolute;
                         top: 100%;
                         left: 0;    
@@ -83,7 +84,7 @@ header{
                         transition: all 0.3s;
                   }
 
-                  .checkBtn{
+                  .header__checkBtn{
                         align-self: flex-start;
                         display: block;
                         cursor: pointer;
@@ -93,20 +94,21 @@ header{
                         top: 0;
                         right: 0;
 
-                        div{
+                        &-animationBar{
                               width: 25px;
                               height: 3px;
                               background-color: base.$primary-color;
                               margin: 4px 0;
                               transition: background-color 0.3s ease; /* Agregamos una transición para el color de fondo */
                         }
-                  }
-                  
-                  & .open {
-                        div{
-                              background-color: #e1e1e1c0;
+
+                        &--open {
+                              .header__checkBtn-animationBar{
+                                    background-color: base.$secundary-bg-color;
+                              }
                         }
                   }
+                  
                   
             }
       }
