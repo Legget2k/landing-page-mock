@@ -5,7 +5,7 @@ import LinkComponent from './linkComponent';
 const Link = ( linksFromNavBar ) => { //props
   return (
     <>
-      <ul className='header__link-container'>
+      <ul className='header__links-container'>
         <LinkComponent links={linksFromNavBar.links} />
       </ul>
     </>

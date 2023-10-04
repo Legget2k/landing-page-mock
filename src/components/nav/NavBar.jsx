@@ -11,7 +11,10 @@ function Navbar() {
 
   useEffect(() => {
     const newData = [
-      // {name: "inicio", url: "/", description: "home description"}
+      {name: "inicio", url: "/", description: "home description"},
+      {name: "shop", url: "/shop", description: "home description"},
+      {name: "forum", url: "/", description: "home description"},
+      {name: "support", url: "/", description: "home description"}
     ];
     /*the links should have 3 properties for rendering name: url: and description:*/
   

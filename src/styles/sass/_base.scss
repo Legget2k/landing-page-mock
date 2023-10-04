@@ -6,6 +6,7 @@ $contrast-color: #6fe40f; //use for remark things
 
 //Vars colors for backgrounds
 $primary-bg-color: #270063;
+$primary-bg-color--opacity: #28006368;
 $secundary-bg-color: #202020;
 $contrast-bg-color: #5500d4;
 
@@ -90,16 +91,18 @@ a{
       color: $primary-color;
 }
 
+img{
+  width: 100%;
+}
+
 body{
       width: 100%;
       @include flex(row, center, nowrap);
       background-color: $primary-bg-color;
 
       .web-container{ 
-            @include flex(column, center, wrap);
+            @include flex($direction: column, $justify: center, $wrap: wrap);
             max-width: 1280px;
             width: 100%;
-            padding: 0 30px;
-            background-color: $secundary-bg-color;
       }
 }

@@ -2,22 +2,25 @@
 
 
 .header{
-      @include base.flex(row, space-between, wrap);
+      @include base.flex($align-items: center, $justify: space-between, $wrap: wrap);
       align-self: flex-start;
       width: 100%;
+      min-height: 100px;
+      padding: 0 30px;
       position: sticky;
       top: 0;
       background-color: base.$contrast-bg-color;
 
       &__logo-container{
-            @include base.flex();
+            height: 100%;
+            @include base.flex($justify: center, $align-items: center);
       }
 
       &__nav{
-            @include base.flex();
+            @include base.flex;
 
-            .link-container{
-                  @include base.flex();
+            .header__links-container{
+                  @include base.flex($justify:space-around, $align-items: center);
                   user-select: none;
                   gap: 20px;
             }
@@ -44,41 +47,39 @@
 @media (max-width: 768px) {
 
       .header{
-            padding: 0 30px;
             
-            &__nav{
-                  align-self: center;
+            &__logo-container{
                   
-                  .header__link-container{
+            }
+
+            &__nav{
+
+            
+                  .header__links-container{
                         display: none;
 
                         &-item{
-                              display: flex;
-                              flex-wrap: wrap;
+                              @include base.flex();
                               width: 100%;
                               height: 60px;
                               border-bottom: 1px solid #ccc;
                               color: base.$primary-color;
-                              background-color: base.$contrast-bg-color;
-                              
-                              &-link{    
-                                    height: 100%;
-                                    width: 100%;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    flex-wrap: wrap-reverse;
-                              }
+                              background-color: base.$contrast-bg-color;  
+                        }
+                        &-link{    
+                              height: 100%;
+                              width: 100%;
+                              @include base.flex($direction:row, $justify: space-around, $align-content: center, $wrap:wrap);
+                              &:hover{ background-color: base.$primary-bg-color--opacity;}
                         }
                   }
 
-                  #check:checked ~ .header__link-container{
+                  #check:checked ~ .header__links-container{
                         position: absolute;
                         top: 100%;
                         left: 0;    
                         gap: 0;
-                        display: flex;
-                        flex-direction: column;
+                        @include base.flex($direction:column);
                         width: 100%;
                         background-color: base.$primary-bg-color;
                         transition: all 0.3s;

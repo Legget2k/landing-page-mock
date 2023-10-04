@@ -5,9 +5,10 @@ function Media( medias ) {
   return (
     <>
     {mediasObj.map( (obj, index) => (
-        <a href={obj.url} key={index}>
-          <span>
-            <i>iconSVG</i> {obj.name}
+        <a href={obj.url} className="footer__media-link" key={index}>
+          <span className="footer__media-text">
+            <i className="footer__media-icon"> {obj.icon} </i>
+             {obj.name}
           </span>
         </a>
         )
