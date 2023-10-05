@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import DescriptiveTextRender from "./DescriptiveTextRender.jsx";
 import Poe from '../../../assets/poeAtlas.jpg';
+import City from '../../../assets/punkCity.jpg';
 
 function DescriptiveSection() {
   const [gameData, setGameData] = useState([]);
@@ -15,7 +17,7 @@ function DescriptiveSection() {
       {
         title: "Testing no link game",
         gameDescription: "lorem for sure ipsum dolor sit consectecturcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi asp",
-        picture: "",
+        picture: <img src={City.src} alt="Path Of Exiles" />,
         url: ""
       }
     ];
@@ -28,22 +30,9 @@ function DescriptiveSection() {
       <section className='main__descriptive'>
         {gameData.map((obj, index) => (
           <div key={index} className="main__descriptive-entry">
-            <div className="main__descriptive-text">
-              {obj.url ? (
-                <>
-                  <a href={obj.url}>
-                    <h2>{obj.title}</h2>
-                  </a>
-                  <p>{obj.gameDescription}</p>
-                  <span>Click <a href={obj.url}>Aquí</a> para visitar la página oficial</span>
-                </>
-              ) : (
-                <>
-                  <h2>{obj.title}</h2>
-                  <p>{obj.gameDescription}</p>
-                </>
-              )}
-            </div>
+
+            <DescriptiveTextRender data={obj} index={index}/>
+            
             <div className="main__descriptive-picture">
               {obj.picture}
             </div>
