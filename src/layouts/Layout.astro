@@ -3,6 +3,7 @@ import '../styles/css/main.css';
 import '../styles/css/normalize.css';
 import Footer from '../components/footer/Footer';
 import NavBar from '../components/nav/NavBar';
+import Descriptive from '../components/mainReusables/gameDescriptive/Descriptive-section';
 ---
 
 
@@ -19,7 +20,9 @@ import NavBar from '../components/nav/NavBar';
 
             <NavBar client:load/>   
             
-            <slot/>
+            <main class="main">
+                  <Descriptive client:visible/>
+            </main>
 
             <Footer client:load/>
       </div>
