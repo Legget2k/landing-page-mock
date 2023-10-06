@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function DescriptiveTextRender({data}) {
   return (
     <>
@@ -10,7 +11,9 @@ function DescriptiveTextRender({data}) {
                     <h2>{data.title}</h2>
                   </a>
                   <p>{data.gameDescription}</p>
-                  <span>Click <a href={data.url}>Aquí</a> para visitar la página oficial</span>
+                  <a href={data.url}>
+                    <span className='main__descriptive-text--button'>Click Aquí para visitar la página oficial</span>
+                  </a>
                 </>
               ) : (
                 <>

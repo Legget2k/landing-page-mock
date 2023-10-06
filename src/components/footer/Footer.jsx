@@ -20,7 +20,6 @@ function Footer() {
         <h3>Kigen Games LLS</h3>
         <hr />
         <span>Kigen Games © 2023</span>
-        {/* <img src={Earth.src} alt="earth" /> */}
       </section>
     </footer>
   )

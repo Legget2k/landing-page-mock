@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Media( medias ) {
       const mediasObj = medias.media;
   return (

@@ -3,3 +3,42 @@
 @use 'header';
 @use 'footer';
 
+
+.main{
+      padding: 5%;
+}
+
+.main__descriptive-entry{
+      @include base.flex($align-items:stretch);
+      margin-bottom: 50px;
+      &:last-child{
+            margin-bottom: 0;
+      }
+
+      .main__descriptive-text{
+            @include base.flex($justify: center, $wrap: wrap, $align-content: center);
+            gap: 20px;
+            padding: 0 30px;
+            background-color: base.$contrast-bg-color--opacity;
+            outline: 1px solid base.$secundary-bg-color;
+            flex-basis: 50%;
+
+            .main__descriptive-text--button{
+                  @include base.spanButton();
+            }
+      }
+
+      .main__descriptive-picture{
+            @include base.flex();
+            flex-basis: 50%;
+      }
+}
+
+@media (max-width: 768px){
+      .main{padding: 0;}
+      .main__descriptive-entry{
+            @include base.flex($direction:column, $align-items:stretch, $wrap: wrap-reverse);
+            margin-bottom: 10px;
+            gap: 10px;
+      }
+}

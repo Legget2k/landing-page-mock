@@ -9,6 +9,7 @@ $primary-bg-color: #270063;
 $primary-bg-color--opacity: #28006368;
 $secundary-bg-color: #202020;
 $contrast-bg-color: #5500d4;
+$contrast-bg-color--opacity: #5500d453;
 
 //mixin section
 @mixin flex($direction: row, $justify: start, $align-items: start, $align-content: start, $wrap: nowrap) {
@@ -69,6 +70,12 @@ $contrast-bg-color: #5500d4;
       }
     }
 
+@mixin spanButton(){
+  background-color: $secundary-bg-color;
+  border-radius: 15px;
+  padding: 3px;
+}
+
 //general styles
 *{
       margin: 0;
@@ -78,10 +85,17 @@ $contrast-bg-color: #5500d4;
 
 h1,h2,h3,h4,h5,h6{
       font-weight: bolder;
+      color: $primary-color;
+      margin-bottom: 15px;
+      user-select: none;
 }
 
 p{
-      text-align: center;
+      color: $primary-color;
+}
+
+span{
+  color: $primary-color;
 }
 
 li{list-style: none;}
@@ -89,6 +103,8 @@ li{list-style: none;}
 a{
       text-decoration: none;
       color: $primary-color;
+      font-size: 1em;
+      text-align: center;
 }
 
 img{
