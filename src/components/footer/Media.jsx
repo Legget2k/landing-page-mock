@@ -9,7 +9,6 @@ function Media( medias ) {
         <a href={obj.url} className="footer__media-link" key={index}>
           <span className="footer__media-text">
             <i className="footer__media-icon"> {obj.icon} </i>
-             {obj.name}
           </span>
         </a>
         )

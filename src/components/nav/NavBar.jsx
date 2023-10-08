@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Links from "./LinkContainer";
-import Logo from "./Logo";
+import Logo from "./logo.jsx";
 import Hamb from "./Hamburguer";
 import '../../styles/css/main.css';
 

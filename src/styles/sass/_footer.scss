@@ -3,19 +3,15 @@
 
 .footer{
       color: base.$primary-color;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      @include base.flex($align-items:center, $justify: space-between);
       width: 100%;
       border-top: 1px solid base.$primary-bg-color;
-      gap: 30px;
       background-color: base.$contrast-bg-color;
       padding: 20px 70px;
-
       
       &__media-container{
             @include base.flex($justify: center, $align-items:center, $align-content:center, $wrap:wrap);
-            gap: 25px;
+            gap: 15px;
       }
 
       &__media-link{
