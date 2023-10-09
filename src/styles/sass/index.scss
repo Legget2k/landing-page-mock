@@ -5,12 +5,19 @@
 
 
 .main{
-      padding: 5%;
+      padding: 2% 5%;
 }
-
+.main__descriptive{
+      @include base.flex($wrap:wrap);
+      gap: 20px;
+}
 .main__descriptive-entry{
       @include base.flex($align-items:stretch);
-      margin-bottom: 50px;
+      outline: 1px solid white;
+      border-radius: 20px;
+      padding: 20px 10px;
+      background-color: #7600bf2b;
+      gap: 20px;
       &:last-child{
             margin-bottom: 0;
       }
@@ -19,9 +26,8 @@
             @include base.flex($justify: center, $wrap: wrap, $align-content: center);
             gap: 20px;
             padding: 0 30px;
-            background-color: base.$contrast-bg-color--opacity;
-            outline: 1px solid base.$secundary-bg-color;
             flex-basis: 50%;
+            border-right: .5px solid white;
 
             .main__descriptive-text--button{
                   @include base.spanButton();
@@ -31,6 +37,11 @@
       .main__descriptive-picture{
             @include base.flex();
             flex-basis: 50%;
+            
+            &-image{
+                  border-radius: 50px;
+                  
+            }
       }
 }
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 function Hamburguer() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,24 +7,19 @@ function Hamburguer() {
     setIsOpen(!isOpen);
   }
 
-  // Function to drive the change in px based on viewport
   function handleResize() {
-    // if viewport > 768px mobile menu will close automatically
     if (window.innerWidth > 768) {
       setIsOpen(false);
     }
   }
 
-  // effect to listen changes on viewport
   useEffect(() => {
-    // adding a listener for the event resize
     window.addEventListener('resize', handleResize);
 
-    // Clean event listener when unmounting component
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  });
+  }, []);
 
   return (
     <>

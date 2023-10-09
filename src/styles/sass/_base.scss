@@ -1,3 +1,7 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+$primary-font-style: 'Young Serif', serif;
+
 //var section
 //Vars colors for texts
 $primary-color: #e1e1e1; //use for the mostly things in web
@@ -88,10 +92,12 @@ h1,h2,h3,h4,h5,h6{
       color: $primary-color;
       margin-bottom: 15px;
       user-select: none;
+      font-family: $primary-font-style;
 }
 
 p{
       color: $primary-color;
+      font-family: $primary-font-style;
 }
 
 span{
@@ -114,8 +120,9 @@ img{
 
 body{
       width: 100%;
-      @include flex(row, center, nowrap);
-      background-color: $primary-bg-color;
+      @include flex($align-content: center, $justify:center);
+      background: #7600bf;
+      background: radial-gradient(circle, #7600bf 0%, #000000c7 100%);
 
       .web-container{ 
             @include flex($direction: column, $justify: center, $wrap: wrap);

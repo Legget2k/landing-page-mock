@@ -19,7 +19,6 @@ function Footer() {
         <MediaRender media={mediaIcons}/>
       </section>
 
-      
     </footer>
   )
 }

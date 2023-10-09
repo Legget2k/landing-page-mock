@@ -6,7 +6,7 @@
       @include base.flex($align-items:center, $justify: space-between);
       width: 100%;
       border-top: 1px solid base.$primary-bg-color;
-      background-color: base.$contrast-bg-color;
+      background-color: #7600bf;
       padding: 20px 70px;
       
       &__media-container{

@@ -2,7 +2,7 @@ import React from 'react';
 import LinkComponent from './linkComponent';
 
 
-const Link = ( linksFromNavBar ) => { //props
+const Link = ( linksFromNavBar ) => {
   return (
     <>
       <ul className='header__links-container'>
