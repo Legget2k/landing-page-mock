@@ -3,5 +3,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+  integrations: [react()],
+  staticFiles: {
+    "/favicon.ico": "static/favicon.ico",
+  },
 });
