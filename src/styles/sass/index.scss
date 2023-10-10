@@ -16,7 +16,7 @@
       outline: 1px solid white;
       border-radius: 20px;
       padding: 20px 10px;
-      background-color: #7600bf2b;
+      background-color: rgba(0, 0, 0, 0.387);
       gap: 20px;
       &:last-child{
             margin-bottom: 0;
@@ -41,6 +41,9 @@
             &-image{
                   border-radius: 50px;
                   
+                  &:hover{
+                        
+                  }
             }
       }
 }
@@ -50,6 +53,11 @@
       .main__descriptive-entry{
             @include base.flex($direction:column, $align-items:stretch, $wrap: wrap-reverse);
             margin-bottom: 10px;
-            gap: 10px;
+            gap: 40px;
+            
+            .main__descriptive-text{
+                  
+                  border: none;
+            }
       }
 }

@@ -7,17 +7,15 @@ function DescriptiveTextRender({data}) {
       <div className="main__descriptive-text">
               {data.url ? (
                 <>
-                  <a href={data.url}>
-                    <h2>{data.title}</h2>
-                  </a>
+                  <h3>{data.title}</h3>
                   <p>{data.gameDescription}</p>
-                  <a href={data.url}>
+                  <a href={data.url} target="_blank">
                     <span className='main__descriptive-text--button'>Click Aquí para visitar la página oficial</span>
                   </a>
                 </>
               ) : (
                 <>
-                  <h2>{data.title}</h2>
+                  <h3>{data.title}</h3>
                   <p>{data.gameDescription}</p>
                 </>
               )}

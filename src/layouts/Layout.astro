@@ -3,6 +3,7 @@ import '../styles/css/main.css';
 import '../styles/css/normalize.css';
 import Footer from '../components/footer/Footer';
 import NavBar from '../components/nav/NavBar';
+import Hero from '../components/mainReusables/heroSection/HeroSection';
 import Descriptive from '../components/mainReusables/gameDescriptive/DescriptiveSection';
 ---
 
@@ -23,7 +24,8 @@ import Descriptive from '../components/mainReusables/gameDescriptive/Descriptive
             <NavBar client:load/>   
             
             <main class="main">
-                  <Descriptive client:visible/>
+                  <!-- <Hero /> -->
+                  <Descriptive client:visible/> 
             </main>
             
             <Footer/>

@@ -75,9 +75,10 @@ $contrast-bg-color--opacity: #5500d453;
     }
 
 @mixin spanButton(){
-  background-color: $secundary-bg-color;
+  background-color: rgba(0, 0, 0, 0.387);
   border-radius: 15px;
-  padding: 3px;
+  padding: 10px;
+  font-size: 1.5em;
 }
 
 //general styles
@@ -93,11 +94,19 @@ h1,h2,h3,h4,h5,h6{
       margin-bottom: 15px;
       user-select: none;
       font-family: $primary-font-style;
+      text-align: center;
+}
+
+@for $i from 4 through 1 {
+  h#{$i} {
+    font-size: 16px * (5 - $i);
+  }
 }
 
 p{
       color: $primary-color;
       font-family: $primary-font-style;
+      font-size: 1.2em;
 }
 
 span{
@@ -121,12 +130,16 @@ img{
 body{
       width: 100%;
       @include flex($align-content: center, $justify:center);
-      background: #7600bf;
-      background: radial-gradient(circle, #7600bf 0%, #000000c7 100%);
+      background-color: #202020;
+
 
       .web-container{ 
             @include flex($direction: column, $justify: center, $wrap: wrap);
-            max-width: 1280px;
+            max-width: 1600px;
             width: 100%;
+            position: relative;
+            top: 100px;
+            background: #7600bf;
+            background: radial-gradient(circle, #7600bf 0%, #000000c7 100%);
       }
 }

@@ -13,11 +13,29 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
   user-select: none;
   font-family: "Young Serif", serif;
+  text-align: center;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h1 {
+  font-size: 64px;
 }
 
 p {
   color: #e1e1e1;
   font-family: "Young Serif", serif;
+  font-size: 1.2em;
 }
 
 span {
@@ -48,8 +66,7 @@ body {
   align-items: flex-start;
   align-content: center;
   flex-wrap: nowrap;
-  background: #7600bf;
-  background: radial-gradient(circle, #7600bf 0%, rgba(0, 0, 0, 0.7803921569) 100%);
+  background-color: #202020;
 }
 body .web-container {
   display: flex;
@@ -58,8 +75,12 @@ body .web-container {
   align-items: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  max-width: 1280px;
+  max-width: 1600px;
   width: 100%;
+  position: relative;
+  top: 100px;
+  background: #7600bf;
+  background: radial-gradient(circle, #7600bf 0%, rgba(0, 0, 0, 0.7803921569) 100%);
 }
 
 /*sass index.scss ../css/main.css for transpilation*/
@@ -74,7 +95,9 @@ body .web-container {
   width: 100%;
   min-height: 100px;
   padding: 0 30px;
-  position: relative;
+  position: fixed;
+  right: 0;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.387);
 }
 .header__logo-container {
@@ -102,7 +125,10 @@ body .web-container {
   align-content: flex-start;
   flex-wrap: nowrap;
   user-select: none;
-  gap: 20px;
+  gap: 30px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  max-width: 350px;
 }
 
 .description {
@@ -202,8 +228,9 @@ body .web-container {
   flex-wrap: nowrap;
   width: 100%;
   border-top: 1px solid #270063;
-  background-color: #7600bf;
+  background-color: rgba(0, 0, 0, 0.387);
   padding: 20px 70px;
+  position: relative;
 }
 .footer__media-container {
   display: flex;
@@ -233,17 +260,18 @@ body .web-container {
   align-items: center;
   align-content: flex-start;
   flex-wrap: nowrap;
-  font-size: 0.9em;
-  max-width: 30px;
+  max-width: 50px;
   text-align: center;
 }
 .footer__info-container {
   text-align: center;
+  font-size: 1.3em;
 }
 
 @media (max-width: 768px) {
   .footer {
     align-items: center;
+    padding: 0;
   }
   .footer__info-container {
     text-align: center;
@@ -273,7 +301,7 @@ body .web-container {
   outline: 1px solid white;
   border-radius: 20px;
   padding: 20px 10px;
-  background-color: rgba(118, 0, 191, 0.168627451);
+  background-color: rgba(0, 0, 0, 0.387);
   gap: 20px;
 }
 .main__descriptive-entry:last-child {
@@ -292,9 +320,10 @@ body .web-container {
   border-right: 0.5px solid white;
 }
 .main__descriptive-entry .main__descriptive-text .main__descriptive-text--button {
-  background-color: #202020;
+  background-color: rgba(0, 0, 0, 0.387);
   border-radius: 15px;
-  padding: 3px;
+  padding: 10px;
+  font-size: 1.5em;
 }
 .main__descriptive-entry .main__descriptive-picture {
   display: flex;
@@ -308,7 +337,6 @@ body .web-container {
 .main__descriptive-entry .main__descriptive-picture-image {
   border-radius: 50px;
 }
-
 @media (max-width: 768px) {
   .main {
     padding: 0;
@@ -321,7 +349,10 @@ body .web-container {
     align-content: flex-start;
     flex-wrap: wrap-reverse;
     margin-bottom: 10px;
-    gap: 10px;
+    gap: 40px;
+  }
+  .main__descriptive-entry .main__descriptive-text {
+    border: none;
   }
 }
 

@@ -6,8 +6,9 @@
       @include base.flex($align-items:center, $justify: space-between);
       width: 100%;
       border-top: 1px solid base.$primary-bg-color;
-      background-color: #7600bf;
+      background-color: rgba(0, 0, 0, 0.387);
       padding: 20px 70px;
+      position: relative;
       
       &__media-container{
             @include base.flex($justify: center, $align-items:center, $align-content:center, $wrap:wrap);
@@ -25,13 +26,13 @@
 
       &__media-text{
             @include base.flex($direction:column, $align-items: center);
-            font-size: .9em;
-            max-width: 30px;
+            max-width: 50px;
             text-align: center;
       }
 
       &__info-container{
             text-align: center;
+            font-size: 1.3em;
       }
 
 }
@@ -39,7 +40,7 @@
 @media (max-width: 768px) {
       .footer{
             align-items: center;
-
+            padding:0;
             &__info-container{
                   text-align: center;
             }

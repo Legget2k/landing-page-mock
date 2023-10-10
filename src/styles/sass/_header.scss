@@ -7,7 +7,9 @@
       width: 100%;
       min-height: 100px;
       padding: 0 30px;
-      position: relative;
+      position: fixed;
+      right: 0;
+      top: 0;
       background-color: rgba(0, 0, 0, 0.387);
 
       &__logo-container{
@@ -21,7 +23,10 @@
             .header__links-container{
                   @include base.flex($justify:space-around, $align-items: center);
                   user-select: none;
-                  gap: 20px;
+                  gap: 30px;
+                  font-size: 1.5em;
+                  font-weight: bolder;
+                  max-width: 350px;
             }
       }
 }
