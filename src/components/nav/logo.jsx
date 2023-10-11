@@ -1,5 +1,5 @@
 import React from 'react';
-import KigenLogo from '../../assets/positivo-logo.svg';
+import KigenLogo from '../../assets/logo.svg';
 
 
 function logo() {

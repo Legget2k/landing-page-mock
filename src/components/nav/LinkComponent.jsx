@@ -24,8 +24,8 @@ function LinkComponent( { links } ) {
         <a href={link.url}
            className='header__links-container-link'>
             {link.name}
-          <Description description={link.description} hover={isHovered === index} />
         </a>
+        <Description description={link.description} hover={isHovered === index} />
       </li>
     ));
   }

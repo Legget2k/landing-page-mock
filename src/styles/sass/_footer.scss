@@ -4,7 +4,7 @@
 .footer{
       @include base.flex($align-items:center, $justify: space-between);
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.387);
+      background-color: map-get(base.$bgColors, secundary);
       padding: 20px 70px;
       position: relative;
       
@@ -30,6 +30,7 @@
       &__info-container{
             text-align: center;
             font-size: 1.3em;
+            @include base.applyFontStyles();
       }
 
 }

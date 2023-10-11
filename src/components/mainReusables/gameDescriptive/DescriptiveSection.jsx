@@ -31,6 +31,10 @@ function DescriptiveSection() {
             
             <div className="main__descriptive-picture">
               {obj.picture}
+              <div className="main__descriptive-picture--overlay">
+                <h3>Tagged as</h3>
+                <span>arpg, action, adventure</span>
+              </div>
             </div>
           </div>
         ))}

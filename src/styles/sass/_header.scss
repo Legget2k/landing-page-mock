@@ -5,12 +5,9 @@
       @include base.flex($align-items: center, $align-content:center, $justify: space-between, $wrap: wrap);
       align-self: flex-start;
       @include base.sizeBox($width:100%);
-      min-height: 100px;
+      min-height: 80px;
       padding: 0 40px;
-      position: fixed;
-      right: 0;
-      top: 0;
-      background-color: #00000063;
+      background: map-get(base.$bgColors, secundary);
 
       &__logo-container{
             @include base.flex($justify: center, $align-items: center);
@@ -24,6 +21,11 @@
                   @include base.flex($justify:space-around, $align-items: center, $gap: 30px);
                   @include base.applyFontStyles($size:1.5em, $weight: bolder);
                   user-select: none;
+
+                  &-link:hover{
+                        color: map-get(base.$colors, secundary);
+                        transition: all .3s ease-in-out;
+                  }
             }
       }
 }
@@ -34,7 +36,7 @@
       user-select: none;
       position: absolute;
       border-radius: 20px;
-      @include base.applyFontStyles($size:1em, $weight: bolder);
+      @include base.applyFontStyles($size:.6em, $weight: bolder);
       color: map-get(base.$colors, primary);
 }
 .show{
@@ -45,6 +47,7 @@
 #check, .checkBtn{
       display: none;
 }
+
 @media (max-width: 768px) {
 
       .header{
@@ -59,7 +62,7 @@
                         display: none;
 
                         &-item{
-                              @include base.flex();
+                              @include base.flex($wrap:wrap, $justify:center, $align-items:end);
                               width: 100%;
                               height: 60px;
                               border-bottom: 1px solid #ccc;
@@ -68,18 +71,20 @@
                         &-link{    
                               height: 100%;
                               width: 100%;
-                              @include base.flex($direction:row, $justify: space-around, $align-content: center, $wrap:wrap);
+                              @include base.flex($justify:center);
                         }
                   }
 
                   #check:checked ~ .header__links-container{
-                        position: absolute;
-                        top: 100%;
-                        left: 0;    
-                        gap: 0;
                         @include base.flex($direction:column);
+                        background-color: #ffffff0b;
+                        backdrop-filter: blur(4px);
+                        position: absolute;
+                        top: 80px;
+                        left: 0;    
                         width: 100%;
                         transition: all 0.3s;
+                        z-index: 1000;
                   }
 
                   .header__checkBtn{
@@ -87,7 +92,6 @@
                         display: block;
                         cursor: pointer;
                         user-select: none;
-                        color: map-get(base.$colors, primary);
                         position: relative;
                         top: 0;
                         right: 0;
@@ -97,11 +101,12 @@
                               height: 3px;
                               background-color: map-get(base.$colors, primary);
                               margin: 4px 0;
-                              transition: background-color 0.3s ease; /* Agregamos una transición para el color de fondo */
+                              transition: background-color 0.3s ease;
                         }
 
                         &--open {
                               .header__checkBtn-animationBar{
+                                    background-color: map-get(base.$colors, secundary);
                               }
                         }
                   }

@@ -5,55 +5,112 @@
 
 
 .main{
-      padding: 2% 5%;
+      @include base.flex($align-items:center, $direction:column);
 }
+
+.main__hero{
+      background-image: url(../../assets/hero.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 900px;
+      @include base.sizeBox($width:100%, $height:900px);
+      @include base.flex($justify:center, $align-content:flex-end, $wrap:wrap);
+      padding: 50px;
+
+      &-content{
+            @include base.flex($justify: center, $wrap:wrap, $align-content: center, $gap: 120px);
+            align-self: flex-end;
+            @include base.glassMorph();
+            @include base.sizeBox($width:1600px);
+
+            
+      }
+
+      &-btns{
+            @include base.flex();
+      }
+}
+
 .main__descriptive{
       @include base.flex($wrap:wrap);
-      gap: 20px;
-}
-.main__descriptive-entry{
-      @include base.flex($align-items:stretch);
-      outline: 1px solid white;
-      border-radius: 20px;
-      padding: 20px 10px;
-      background-color: rgba(0, 0, 0, 0.387);
-      gap: 20px;
-      &:last-child{
-            margin-bottom: 0;
-      }
-
-      .main__descriptive-text{
-            @include base.flex($justify: center, $wrap: wrap, $align-content: center);
+      max-width: 1600px;
+      gap: 40px;
+      
+      .main__descriptive-entry{
+            @include base.flex($align-items:center);
+            border-radius: 20px;
+            padding: 20px 10px;
             gap: 20px;
-            padding: 0 30px;
-            flex-basis: 50%;
-            border-right: .5px solid white;
-
-            .main__descriptive-text--button{
-                  @include base.spanButton();
+            @include base.glassMorph();
+            &:last-child{
+                  margin-bottom: 0;
             }
-      }
+      
+            .main__descriptive-text{
+                  @include base.flex($justify: center, $wrap: wrap, $align-content: center);
+                  
+                  @include base.sizeBox($width:100%, $height:100%);
+                  gap: 20px;
+                  padding: 0 30px;
+                  flex-basis: 50%;
+                  border-right: .5px solid white;
+      
+                  .main__descriptive-text--button{
+                        @include base.spanButton();
+                  }
+            }
+}
 
       .main__descriptive-picture{
             @include base.flex();
             flex-basis: 50%;
+            position: relative;
             
             &-image{
                   border-radius: 50px;
+                  z-index: -100;
+            }
+            &--overlay{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  @include base.flex($direction:column,$justify:center,$align-items:center);
+                  @include base.sizeBox($width:100%, $height:100%);
+                  border-radius: 50px;
+                  background-color: #000000c0;
+                  opacity: 0;
+                  transition: all .6s;
+                  
+                  & > *{
+                        transform: translateY(50px);
+                        transition: transform .3s;
+                  }
+
+                  &:hover{
+                        opacity: 1;
+                        
+                        & > *{
+                              transform: translateY(0px);
+                        }
+                  }
             }
       }
 }
 
 @media (max-width: 768px){
       .main{padding: 0;}
-      .main__descriptive-entry{
-            @include base.flex($direction:column, $align-items:stretch, $wrap: wrap-reverse);
-            margin-bottom: 10px;
-            gap: 40px;
-            
-            .main__descriptive-text{
+
+      .main__descriptive{
+
+            .main__descriptive-entry{
+                  @include base.flex($direction:column);
+                  gap: 40px;
                   
-                  border: none;
+                  .main__descriptive-text{
+                        
+                        border: none;
+                  }
             }
       }
 }

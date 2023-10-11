@@ -5,9 +5,12 @@ function HeroSection() {
   return (
     <section className='main__hero'>
       <div className='main__hero-content'>
-            <h1>LOREM IPSUM DOT ANIM</h1>
-            
-            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, temporibus, cupiditate aut solut</h2>
+            <h1>kigen offers a new game concept</h1>
+            <h2>Enjoy the max potencial from this rpg per turns with a really intrigant history and really immersive world based in cyberpunk lifestyle</h2>
+            {/* <ul className='main__hero-btns'>
+              <li><a href="">boton1</a></li>
+              <li><a href="">boton2</a></li>
+            </ul> */}
       </div>
     </section>
   )
