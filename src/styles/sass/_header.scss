@@ -4,29 +4,26 @@
 .header{
       @include base.flex($align-items: center, $align-content:center, $justify: space-between, $wrap: wrap);
       align-self: flex-start;
-      width: 100%;
+      @include base.sizeBox($width:100%);
       min-height: 100px;
-      padding: 0 30px;
+      padding: 0 40px;
       position: fixed;
       right: 0;
       top: 0;
       background-color: #00000063;
 
       &__logo-container{
-            height: 100%;
             @include base.flex($justify: center, $align-items: center);
+            @include base.sizeBox($height:100%);
       }
 
       &__nav{
-            @include base.flex;
+            @include base.flex();
 
             .header__links-container{
-                  @include base.flex($justify:space-around, $align-items: center);
+                  @include base.flex($justify:space-around, $align-items: center, $gap: 30px);
+                  @include base.applyFontStyles($size:1.5em, $weight: bolder);
                   user-select: none;
-                  gap: 30px;
-                  font-size: 1.5em;
-                  font-weight: bolder;
-                  max-width: 350px;
             }
       }
 }
@@ -37,7 +34,7 @@
       user-select: none;
       position: absolute;
       border-radius: 20px;
-      font-size: 12px;
+      @include base.applyFontStyles($size:1em, $weight: bolder);
       color: map-get(base.$colors, primary);
 }
 .show{
@@ -66,14 +63,12 @@
                               width: 100%;
                               height: 60px;
                               border-bottom: 1px solid #ccc;
-                              color: map-get(base.$colors, primary);
-                              background-color: base.$contrast-bg-color;  
+                              color: map-get(base.$colors, primary); 
                         }
                         &-link{    
                               height: 100%;
                               width: 100%;
                               @include base.flex($direction:row, $justify: space-around, $align-content: center, $wrap:wrap);
-                              &:hover{ background-color: base.$primary-bg-color--opacity;}
                         }
                   }
 
@@ -84,7 +79,6 @@
                         gap: 0;
                         @include base.flex($direction:column);
                         width: 100%;
-                        background-color: base.$primary-bg-color;
                         transition: all 0.3s;
                   }
 
@@ -108,7 +102,6 @@
 
                         &--open {
                               .header__checkBtn-animationBar{
-                                    background-color: base.$secundary-bg-color;
                               }
                         }
                   }

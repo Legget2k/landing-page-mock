@@ -2,10 +2,8 @@
 
 
 .footer{
-      color: base.$primary-color;
       @include base.flex($align-items:center, $justify: space-between);
       width: 100%;
-      border-top: 1px solid base.$primary-bg-color;
       background-color: rgba(0, 0, 0, 0.387);
       padding: 20px 70px;
       position: relative;
@@ -19,7 +17,6 @@
             @include base.flex($direction:column, $wrap: wrap);
 
             &:hover{
-                background-color: base.$primary-bg-color--opacity; //primary-bg-color opacity68
                 border-radius: 120px;
             }
       }
