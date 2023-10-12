@@ -5,13 +5,13 @@ import '../../styles/css/main.css';
 
 
 function Navbar() {
-  const links ="";
-  // [
-  //     {name: "home", url: "/", description: "home description"},
-  //     {name: "shop", url: "/shop", description: "shop description"},
-  //     {name: "forum", url: "/", description: "forum description"},
-  //     {name: "support", url: "/", description: "support description"}
-  //   ];
+  const links =
+  [
+      {name: "home", url: "/", description: "home description"},
+      {name: "shop", url: "/shop", description: "shop description"},
+      {name: "forum", url: "/", description: "forum description"},
+      {name: "support", url: "/", description: "support description"}
+    ];
 
   console.log(links);
 

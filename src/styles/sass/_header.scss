@@ -6,12 +6,12 @@
       align-self: flex-start;
       @include base.sizeBox($width:100%);
       min-height: 80px;
-      padding: 0 40px;
       background: map-get(base.$bgColors, secundary);
 
       &__logo-container{
             @include base.flex($justify: center, $align-items: center);
             @include base.sizeBox($height:100%);
+            user-select: none;
       }
 
       &__nav{
@@ -51,13 +51,10 @@
 @media (max-width: 768px) {
 
       .header{
-            &__logo-container{
-                  width: 50%;
-            }
+            padding: 0 20px;
 
             &__nav{
 
-            
                   .header__links-container{
                         display: none;
 

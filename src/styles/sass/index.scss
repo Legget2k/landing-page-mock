@@ -28,30 +28,26 @@
       }
 
       &-btns{
-            @include base.flex();
+            @include base.flex($gap:40px);
+
+      }&-btn{
+            @include base.spanButton();
       }
 }
 
 .main__descriptive{
-      @include base.flex($wrap:wrap);
+      @include base.flex($wrap:wrap, $gap: 40px);
       max-width: 1600px;
-      gap: 40px;
-      
+            
       .main__descriptive-entry{
-            @include base.flex($align-items:center);
+            @include base.flex($align-items:center, $gap:20px);
             border-radius: 20px;
             padding: 20px 10px;
-            gap: 20px;
             @include base.glassMorph();
-            &:last-child{
-                  margin-bottom: 0;
-            }
       
             .main__descriptive-text{
-                  @include base.flex($justify: center, $wrap: wrap, $align-content: center);
-                  
+                  @include base.flex($justify: center, $wrap: wrap, $align-content: space-around, $gap:20px);
                   @include base.sizeBox($width:100%, $height:100%);
-                  gap: 20px;
                   padding: 0 30px;
                   flex-basis: 50%;
                   border-right: .5px solid white;
@@ -104,8 +100,7 @@
       .main__descriptive{
 
             .main__descriptive-entry{
-                  @include base.flex($direction:column);
-                  gap: 40px;
+                  @include base.flex($direction:column, $gap:40px);
                   
                   .main__descriptive-text{
                         

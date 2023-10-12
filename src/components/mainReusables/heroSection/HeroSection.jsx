@@ -8,8 +8,8 @@ function HeroSection() {
             <h1>kigen offers a new game concept</h1>
             <h2>Enjoy the max potencial from this rpg per turns with a really intrigant history and really immersive world based in cyberpunk lifestyle</h2>
             {/* <ul className='main__hero-btns'>
-              <li><a href="">boton1</a></li>
-              <li><a href="">boton2</a></li>
+              <li className='main__hero-btn'><a href="/">boton1</a></li>
+              <li className='main__hero-btn'><a href="/">boton2</a></li>
             </ul> */}
       </div>
     </section>
