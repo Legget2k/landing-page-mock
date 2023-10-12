@@ -1,23 +1,13 @@
 import React from 'react';
 
-
-function usCards() {
+function UsCard({ name, role, image }) {
   return (
-      <div className='main__us-cards'>
-            <h4>developers</h4>
-
-            <div className='main__us-card'>
-                  <div className='main__us-card-portrait'>
-
-                  </div>
-                  <div className='main__us-card-info'>
-                        <h4>name</h4>     
-                        <p>small description</p>
-                        <a href="/">View More</a>
-                  </div>
-            </div>
-      </div>
-  )
+    <div className="us-card">
+      <img src={image} alt={name} />
+      <h4>{name}</h4>
+      <p>{role}</p>
+    </div>
+  );
 }
 
-export default usCards;
+export default UsCard;

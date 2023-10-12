@@ -94,6 +94,17 @@
       }
 }
 
+.main__us{
+      max-width: 1600px;
+
+      @include base.flex($wrap:wrap, $justify:center, $gap:40px);
+
+      &-cards{
+            width: 300px;
+            height: 450px;
+      }
+}
+
 @media (max-width: 768px){
       .main{padding: 0;}
 
