@@ -8,8 +8,8 @@ function DescriptiveTextRender({data}) {
         <>
           <h3>{data.title}</h3>
           <p>{data.gameDescription}</p>
-          <a href={data.url} target="_blank" className='main__descriptive-text--button'>
-            Click Aquí para visitar la página oficial
+          <a href={data.url} target="_blank" className='main__descriptive-text--button button-49'>
+            Click Aquí
           </a>
         </>
       ) : (

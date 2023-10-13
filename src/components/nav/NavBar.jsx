@@ -7,10 +7,8 @@ import '../../styles/css/main.css';
 function Navbar() {
   const links =
   [
-      {name: "home", url: "/", description: "home description"},
-      {name: "shop", url: "/shop", description: "shop description"},
-      {name: "forum", url: "/", description: "forum description"},
-      {name: "support", url: "/", description: "support description"}
+      {name: "home", url: "#top", description: ""},
+      {name: "about", url: "#about", description: "read about our team"},
     ];
 
   console.log(links);

@@ -8,14 +8,14 @@ function DescriptiveSection() {
     const gameData = [
       {
         title: "Path of Exiles",
-        gameDescription: "Path of Exile es un ARPG y MMO ambientado en un mundo de fantasía oscura. Lo desarrolla la compañía independiente neozelandesa Grinding Gear Games y se puede descargar y jugar gratis. El proyecto se mantiene económicamente gracias a micropagos éticos. El 23 de enero de 2013 se publicó una versión Beta abierta. En marzo de 2013 el juego había alcanzado los dos millones de suscriptores. El juego abandonó la fase Beta y se publicó finalmente tanto en Steam como en su propia web el 23 de octubre de 2013.",
+        gameDescription: "Path of Exile takes place in a dark fantasy world, where the government of the island nation of Oriath exiles people to the continent of Wraeclast, a ruined continent home to many ancient gods. Taking control of an exile, players can choose to play as one of seven character classes – Marauder, Duelist, Ranger, Shadow, Witch, Templar, and Scion. Players are then tasked with fighting their way back to Oriath, defeating ancient gods and great evils during their journey.",
         picture: <img src={Poe.src} alt="Path Of Exiles" className="main__descriptive-picture-image"/>,
         url: "https://www.pathofexile.com",
         tags: "arpg, dungeons, levels, terror"
       },
       {
         title: "Testing no link game",
-        gameDescription: "lorem for sure ipsum dolor sit consectecturcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi asp lorem lorem for sure ipsum dolor sit consectecturcorrupti lorem for sure ipsum dolor sit consectecturcorrupti",
+        gameDescription: "lorem for sure ipsum dolor sit consectecturcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi asp lorem lorem for sure ipsum dolor sit consectecturcorrupti lorem for sure ipsum dolor sit consectecturcorrupti aspcorrupti saepe ullam, atque provident animi aspcorrupti saepe ullam, atque provident animi asp lorem lorem for sure ipsum dolor sit consectecturcorrupti lorem for sure ipsum dolor sit consectecturcorrupti",
         picture: <img src={City.src} alt="Path Of Exiles" className="main__descriptive-picture-image"/>,
         url: "",
         tags: "action, survival, adventurer, sandbox"

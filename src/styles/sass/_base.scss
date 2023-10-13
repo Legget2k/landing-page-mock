@@ -1,8 +1,13 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+@font-face {
+  font-family: glitchGlobin;
+  src: url(../../assets/GlitchGoblin-2O87v.ttf);
+}
 $fonts: (
   primary: ('Montserrat', serif),
-  secundary: ('Merryweather', serif)
+  secundary: ('Merryweather', serif),
+  exponent: ('glitchGlobin')
 );
 
 $textShadow: 3px 3px 4px #00000080;
@@ -16,7 +21,7 @@ $colors: (
 
 //Vars colors for backgrounds
 $bgColors: (
-  primary: #200816,
+  primary: #1A0014,
   secundary: #000,
 );
 
@@ -100,23 +105,130 @@ $bgColors: (
   backdrop-filter: blur(3px);
 }
 
-@mixin spanButton(){
-  @include applyFontStyles($font: secundary, $weight: bold, $style: italic, $size: 1.2em);
-  padding: 10px;
-  border-radius: 10px;
-  user-select: none;
-  transition: all .3s;
-  &:hover{
-    color: map-get($colors, secundary);
-    @include glassMorph();
+// < !-- HTML !--><button class="button-49" role="button">Button 49</button>
+  /* CSS */
+  .button-49,
+  .button-49:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
-}
+
+  .button-49:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'Click Here';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+  }
+
+  .button-49:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .button-49,
+    .button-49:after {
+      width: 200px;
+      height: 86px;
+      line-height: 88px;
+    }
+  }
+
 
 //general styles
 *{
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+}
+
+html{
+  scroll-padding: 80px;
+  scroll-behavior: smooth;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -126,7 +238,7 @@ h1,h2,h3,h4,h5,h6{
 }
 @for $i from 1 through 4{
   h#{$i} {
-    @include applyFontStyles($font: primary, $weight: 600, $style: italic, $color: primary,$size: 16px * (5 - $i));
+    @include applyFontStyles($font: exponent,$style: regular, $color: primary, $size: 16px * (5 - $i));
   }
 }
 

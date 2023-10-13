@@ -6,7 +6,11 @@
       align-self: flex-start;
       @include base.sizeBox($width:100%);
       min-height: 80px;
+      padding: 0 30px;
       background: map-get(base.$bgColors, secundary);
+      position: sticky;
+      top: 0;
+      z-index: 10000;
 
       &__logo-container{
             @include base.flex($justify: center, $align-items: center);
