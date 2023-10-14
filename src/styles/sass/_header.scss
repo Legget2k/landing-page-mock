@@ -25,6 +25,7 @@
                   @include base.flex($justify:space-around, $align-items: center, $gap: 30px);
                   @include base.applyFontStyles($size:1.5em, $weight: bolder);
                   user-select: none;
+                  @include base.applyFontStyles($font: exponent, $size:2.5em);
 
                   &-link:hover{
                         color: map-get(base.$colors, secundary);

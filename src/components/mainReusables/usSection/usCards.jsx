@@ -5,9 +5,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 function UsCards({ employees }) {
   const settings = {
-    dots: false,
-    infinite: false,
-    speed: 700,
+    dots: true,
+    infinite: true,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -22,15 +22,13 @@ function UsCards({ employees }) {
                 <div className="card__picture">
                   <div className='picture-container'>
                     <img src={employee.image.src} alt={employee.name}/>
-                      <div className='picture-content'>
-                        <p>{employee.role}</p>
-                      </div>
                   </div>
                 </div>
               ) : null}
               <div className="card__info">
                 <h3>{employee.name}</h3>
                 <p>{employee.description}</p>
+                <h4>{employee.role}</h4>
               </div>
             </div>
           </div>
