@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-function Hamburguer() {
-  const [isOpen, setIsOpen] = useState(false);
 
-  function toggleMenu() {
-    setIsOpen(!isOpen);
-  }
-
+function Hamburguer({ isOpen, toggleMenu, closeMenu }) {
   function handleResize() {
     if (window.innerWidth > 768) {
-      setIsOpen(false);
+      closeMenu();
     }
   }
 
@@ -19,7 +14,7 @@ function Hamburguer() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [closeMenu]);
 
   return (
     <>

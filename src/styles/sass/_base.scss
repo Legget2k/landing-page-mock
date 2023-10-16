@@ -21,8 +21,9 @@ $colors: (
 
 //Vars colors for backgrounds
 $bgColors: (
-  primary: #0a0027,
+  primary: #1E0116,
   secundary: #000,
+  contrast: #00ff8c51,
 );
 
 //mixin section
@@ -270,7 +271,6 @@ body{
       background-color: map-get($bgColors, primary);
 
       .web-container{ 
-            // @include flex($direction: column, $justify: center, $wrap: wrap);
             @include sizeBox($width:100%);
       }
 }

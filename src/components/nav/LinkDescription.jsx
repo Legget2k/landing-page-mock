@@ -1,12 +1,6 @@
-function LinkDescription({ description, hover}) {
-
+function LinkDescription({ description, hover }) {
   return (
-    <span
-      className={`description ${hover ? 'show' : ''}`}
-
-    >
-      {description}
-    </span>
+    <span className={`description ${hover ? "show" : ""}`}>{description}</span>
   );
 }
 

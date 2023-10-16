@@ -89,7 +89,7 @@
       max-width: 1600px;
       padding: 50px;
       @include base.flex($wrap:wrap,$gap:30px, $justify:center, $align-items:center);
-      @include base.glassMorph($bg: #25001c);
+      background-color: map-get(base.$bgColors, contrast);
 
       .us__text{
             @include base.flex($wrap:wrap, $justify:center, $gap:40px);

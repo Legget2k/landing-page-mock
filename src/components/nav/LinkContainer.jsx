@@ -1,15 +1,14 @@
-import React from 'react';
-import LinkComponent from './linkComponent';
+import React from "react";
+import LinkComponent from "./LinkComponent";
 
-
-const Link = ( linksFromNavBar ) => {
+function LinkContainer({ closeMenu, links }) {
   return (
     <>
-      <ul className='header__links-container'>
-        <LinkComponent links={linksFromNavBar.links} />
+      <ul className="header__links-container">
+        <LinkComponent links={links} closeMenu={closeMenu} />
       </ul>
     </>
-  )
+  );
 }
 
-export default Link;
+export default LinkContainer;

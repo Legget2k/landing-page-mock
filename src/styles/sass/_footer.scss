@@ -13,20 +13,14 @@
             gap: 15px;
       }
 
-      &__media-link{
-            @include base.flex($direction:column, $wrap: wrap);
-
-            &:hover{
-                border-radius: 120px;
-            }
-      }
 
       &__media-icon{
-            @include base.flex($direction:column, $align-items: center);
-            max-width: 50px;
-            border-radius: 50%;
-            transition: all .3s;
 
+            & > svg{
+                  max-width: 50px;
+                  max-height: 50px;
+                  transition: all .3s;
+            }
             &:hover svg{
                   fill: #fefefe;
             }
