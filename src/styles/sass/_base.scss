@@ -1,13 +1,9 @@
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Montserrat:ital,wght@0,400;1,600&display=swap');
-@font-face {
-  font-family: glitchGlobin;
-  src: url(../../assets/GlitchGoblin-2O87v.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
 $fonts: (
   primary: ('Montserrat', serif),
-  secundary: ('Merryweather', serif),
-  exponent: ('glitchGlobin')
+  secundary: ('Audiowide', serif),
 );
 
 $textShadow: 3px 3px 4px #00000080;
@@ -23,7 +19,7 @@ $colors: (
 $bgColors: (
   primary: #1E0116,
   secundary: #000,
-  contrast: #00ff8c51,
+  contrast: #00ff87b0,
 );
 
 //mixin section
@@ -99,8 +95,8 @@ $bgColors: (
   color: map-get($colors,$color);
 }
 
-@mixin glassMorph($bg: #ffffff02){
-  border-radius: 10px;
+@mixin glassMorph($bg: #ffffff02, $borderRadius:0px){
+  border-radius: $borderRadius;
   box-shadow: 0 8px 32px 0 #0e0e0e;
   background-color: $bg;
   backdrop-filter: blur(3px);
@@ -239,7 +235,7 @@ h1,h2,h3,h4,h5,h6{
 }
 @for $i from 1 through 4{
   h#{$i} {
-    @include applyFontStyles($font: exponent,$color: primary, $size: 16px * (5 - $i));
+    @include applyFontStyles($font: secundary,$color: primary, $size: 16px * (5 - $i));
   }
 }
 
@@ -250,15 +246,11 @@ p{
   text-shadow: $textShadow;
 }
 
-span{
-  @include applyFontStyles();
-}
-
 li{list-style: none;}
 
 a{
   text-decoration: none;
-  color: map-get($colors,primary);
+  color: map-get($colors,primary);;
 }
 
 img{

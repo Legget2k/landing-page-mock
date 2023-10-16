@@ -1,9 +1,5 @@
 /*sass index.scss ../css/main.css for transpilation*/
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Montserrat:ital,wght@0,400;1,600&display=swap");
-@font-face {
-  font-family: glitchGlobin;
-  src: url(../../assets/GlitchGoblin-2O87v.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,400;1,600&display=swap");
 /* CSS */
 .button-49,
 .button-49:after {
@@ -120,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: "glitchGlobin";
+  font-family: "Audiowide", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 64px;
@@ -128,7 +124,7 @@ h1 {
 }
 
 h2 {
-  font-family: "glitchGlobin";
+  font-family: "Audiowide", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 48px;
@@ -136,7 +132,7 @@ h2 {
 }
 
 h3 {
-  font-family: "glitchGlobin";
+  font-family: "Audiowide", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 32px;
@@ -144,7 +140,7 @@ h3 {
 }
 
 h4 {
-  font-family: "glitchGlobin";
+  font-family: "Audiowide", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -158,14 +154,6 @@ p {
   font-size: 1.4em;
   color: #e1e1e1;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5019607843);
-}
-
-span {
-  font-family: "Montserrat", serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1em;
-  color: #e1e1e1;
 }
 
 li {
@@ -258,9 +246,10 @@ body .web-container {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: 100%;
   user-select: none;
+}
+.header__logo-container > a {
+  width: 300px;
 }
 .header__nav {
   display: flex;
@@ -273,21 +262,16 @@ body .web-container {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-family: "Montserrat", serif;
-  font-weight: bolder;
-  font-style: normal;
-  font-size: 1.5em;
-  color: #e1e1e1;
-  user-select: none;
-  font-family: "glitchGlobin";
+  font-family: "Audiowide", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 2.5em;
   color: #e1e1e1;
+  user-select: none;
 }
 .header__nav .header__links-container-link:hover {
   color: #7600BF;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s;
 }
 
 .description {
@@ -402,12 +386,10 @@ body .web-container {
   fill: #fefefe;
 }
 .footer__info-container {
-  text-align: center;
-  font-size: 1.3em;
   font-family: "Montserrat", serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.5em;
   color: #e1e1e1;
 }
 
@@ -450,7 +432,7 @@ body .web-container {
   align-content: center;
   flex-wrap: wrap;
   align-self: flex-end;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 8px 32px 0 #0e0e0e;
   background-color: rgba(255, 255, 255, 0.0078431373);
   backdrop-filter: blur(3px);
@@ -479,7 +461,7 @@ body .web-container {
   align-items: center;
   border-radius: 20px;
   padding: 20px 10px;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 8px 32px 0 #0e0e0e;
   background-color: rgba(255, 255, 255, 0.0078431373);
   backdrop-filter: blur(3px);
@@ -541,7 +523,7 @@ body .web-container {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(0, 255, 140, 0.3176470588);
+  background-color: rgba(0, 255, 135, 0.6901960784);
 }
 .main__us .us__text {
   display: flex;
@@ -549,10 +531,6 @@ body .web-container {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  border-radius: 10px;
-  box-shadow: 0 8px 32px 0 #0e0e0e;
-  background-color: rgba(0, 255, 140, 0.0352941176);
-  backdrop-filter: blur(3px);
   padding: 50px;
 }
 .main__us .us__cards {

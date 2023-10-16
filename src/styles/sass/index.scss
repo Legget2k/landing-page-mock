@@ -93,7 +93,6 @@
 
       .us__text{
             @include base.flex($wrap:wrap, $justify:center, $gap:40px);
-            @include base.glassMorph($bg: #00ff8c09);
             padding: 50px;
       }
 

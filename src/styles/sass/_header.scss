@@ -14,8 +14,11 @@
 
       &__logo-container{
             @include base.flex($justify: center, $align-items: center);
-            @include base.sizeBox($height:100%);
             user-select: none;
+
+            & > a{
+                  width: 300px;
+            }
       }
 
       &__nav{
@@ -23,13 +26,12 @@
 
             .header__links-container{
                   @include base.flex($justify:space-around, $align-items: center, $gap: 30px);
-                  @include base.applyFontStyles($size:1.5em, $weight: bolder);
+                  @include base.applyFontStyles($font: secundary, $size:2.5em);
                   user-select: none;
-                  @include base.applyFontStyles($font: exponent, $size:2.5em);
 
                   &-link:hover{
                         color: map-get(base.$colors, secundary);
-                        transition: all .3s ease-in-out;
+                        transition: all .5s;
                   }
             }
       }

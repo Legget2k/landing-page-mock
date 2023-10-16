@@ -27,9 +27,7 @@
       }
 
       &__info-container{
-            text-align: center;
-            font-size: 1.3em;
-            @include base.applyFontStyles();
+            @include base.applyFontStyles($size:1.5em);
       }
 
 }
