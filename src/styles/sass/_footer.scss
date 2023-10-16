@@ -38,6 +38,7 @@
             padding:0;
             &__info-container{
                   text-align: center;
+                  @include base.applyFontStyles($size:1.1em);
             }
       }     
 

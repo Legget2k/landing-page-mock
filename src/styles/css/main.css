@@ -400,6 +400,11 @@ body .web-container {
   }
   .footer__info-container {
     text-align: center;
+    font-family: "Montserrat", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1em;
+    color: #e1e1e1;
   }
 }
 .main {
