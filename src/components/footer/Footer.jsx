@@ -28,7 +28,7 @@ function Footer() {
     },
     {
       name: "Twitter",
-      url: "/twitter",
+      url: "https://x.com/KigenGame?t=7Q1IdLdMBi6-Rxl6n_T53A&s=08",
       icon: (
         <svg
           fill="#00abe3"

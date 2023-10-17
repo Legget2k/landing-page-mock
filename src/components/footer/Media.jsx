@@ -6,7 +6,7 @@ function Media( medias ) {
   return (
     <>
     {mediasObj.map( (obj, index) => (
-        <a href={obj.url} className="footer__media-link" key={index}>
+        <a href={obj.url} target='_blank' className="footer__media-link" key={index}>
           <i className="footer__media-icon"> {obj.icon} </i>
         </a>
         )

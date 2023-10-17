@@ -22,7 +22,7 @@
                   transition: all .3s;
             }
             &:hover svg{
-                  fill: #fefefe;
+                  fill: map-get(base.$colors , secundary);
             }
       }
 
@@ -38,7 +38,7 @@
             padding:0;
             &__info-container{
                   text-align: center;
-                  @include base.applyFontStyles($size:1.1em);
+                  @include base.applyFontStyles($color: secundary, $size:1.1em);
             }
       }     
 

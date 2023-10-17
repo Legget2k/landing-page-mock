@@ -1,5 +1,5 @@
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,400;0,600;1,600&display=swap');
 
 $fonts: (
   primary: ('Montserrat', serif),
@@ -11,15 +11,17 @@ $textShadow: 3px 3px 4px #00000080;
 //var section
 //Vars colors for texts
 $colors: (
-  primary: #e1e1e1,
-  secundary: #7600BF,
+  primary: #ff6d40,
+  secundary: #e1e1e1,
+  contrast: #7600BF,
 );
 
 //Vars colors for backgrounds
 $bgColors: (
   primary: #1E0116,
   secundary: #000,
-  contrast: #00ff87b0,
+  contrast: #09B064,
+  contrast--opacity: #09b065dc,
 );
 
 //mixin section
@@ -87,19 +89,19 @@ $bgColors: (
   height: $height;
 }
 
-@mixin applyFontStyles($font: primary, $weight: normal, $style: normal, $size: 1em, $color: primary) {
+@mixin applyFontStyles($font: primary, $weight: 400, $style: normal, $size: 1em, $color: secundary) {
   font-family: map-get($fonts, $font);
+  color: map-get($colors,$color);
   font-weight: $weight;
   font-style: $style;
   font-size: $size;
-  color: map-get($colors,$color);
 }
 
 @mixin glassMorph($bg: #ffffff02, $borderRadius:0px){
   border-radius: $borderRadius;
   box-shadow: 0 8px 32px 0 #0e0e0e;
   background-color: $bg;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
 }
 
 // < !-- HTML !--><button class="button-49" role="button">Button 49</button>
@@ -239,10 +241,8 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-
-
 p{
-  @include applyFontStyles($font: primary, $weight:400, $size:1.4em);
+  @include applyFontStyles($color:secundary, $weight:600, $font: primary, $size:1.4em);
   text-shadow: $textShadow;
 }
 
@@ -250,12 +250,11 @@ li{list-style: none;}
 
 a{
   text-decoration: none;
-  color: map-get($colors,primary);;
 }
 
 img{
   @include sizeBox($width:100%,$height:100%);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 body{
@@ -270,11 +269,11 @@ body{
 @media (max-width: 768px){
   @for $i from 1 through 4{
     h#{$i} {
-      @include applyFontStyles($font: primary, $weight: 600, $style: italic, $color: primary,$size: 12px * (5 - $i));
+      @include applyFontStyles($font: secundary, $weight: 600, $style: italic, $color: primary,$size: 12px * (5 - $i));
     }
   }
 
   p{
-    @include applyFontStyles($size:1.1em);
+    font-size: 1em;
   }
 }

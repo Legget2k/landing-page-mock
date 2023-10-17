@@ -7,7 +7,7 @@
       @include base.sizeBox($width:100%);
       min-height: 80px;
       padding: 0 30px;
-      background: map-get(base.$bgColors, secundary);
+      background: #000000ed;
       position: sticky;
       top: 0;
       z-index: 10000;
@@ -26,11 +26,14 @@
 
             .header__links-container{
                   @include base.flex($justify:space-around, $align-items: center, $gap: 30px);
-                  @include base.applyFontStyles($font: secundary, $size:2.5em);
                   user-select: none;
+                  
+                  &-link{
+                        @include base.applyFontStyles($font: secundary, $size:2.5em);
+                  }
 
                   &-link:hover{
-                        color: map-get(base.$colors, secundary);
+                        color: map-get(base.$colors, contrast);
                         transition: all .5s;
                   }
             }
@@ -69,8 +72,6 @@
                               @include base.flex($wrap:wrap, $justify:center, $align-items:end);
                               width: 100%;
                               height: 60px;
-                              border-bottom: 1px solid #ccc;
-                              color: map-get(base.$colors, primary); 
                         }
                         &-link{    
                               height: 100%;
@@ -103,14 +104,14 @@
                         &-animationBar{
                               width: 25px;
                               height: 3px;
-                              background-color: map-get(base.$colors, primary);
+                              background-color: map-get(base.$colors, secundary);
                               margin: 4px 0;
                               transition: background-color 0.3s ease;
                         }
 
                         &--open {
                               .header__checkBtn-animationBar{
-                                    background-color: map-get(base.$colors, secundary);
+                                    background-color: map-get(base.$colors, contrast);
                               }
                         }
                   }

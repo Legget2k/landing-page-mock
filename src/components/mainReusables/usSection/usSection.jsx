@@ -12,7 +12,7 @@ function UsSection() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ullam doloribus, porro quasi repudiandae debitis et quos atque eligendi obcaecati quaerat maxime. At, illo voluptate odio sint amet doloribus iure.'
     },
     {
-      name: 'Rose Amalia',
+      name: 'Luis Herrera',
       role: 'Devop Senior',
       image: PortraitExample,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ullam doloribus, porro quasi repudiandae debitis et quos atque eligendi obcaecati quaerat maxime. At, illo voluptate odio sint amet doloribus iure.'

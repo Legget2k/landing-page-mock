@@ -6,6 +6,7 @@
 
 .main{
       @include base.flex($align-items:center, $direction:column);
+      background-color: #09B064;
 }
 
 .main__hero{
@@ -13,9 +14,9 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      min-height: 1200px;
-      @include base.sizeBox($width:100%, $height:1200px);
-      @include base.flex($justify:center, $align-content:flex-end, $wrap:wrap);
+      min-height: 900px;
+      @include base.sizeBox($width:100%, $height:900px);
+      @include base.flex($justify:center, $align-content:start, $wrap:wrap);
       padding: 50px;
 
       &-content{
@@ -24,7 +25,8 @@
             @include base.glassMorph();
             @include base.sizeBox($width:1600px);
             position: relative;
-            bottom: 300px;
+            transform: translateY(100px);
+            padding: 85px 50px;
       }
 
       &-btns{
@@ -88,12 +90,13 @@
 .main__us{  
       max-width: 1600px;
       padding: 50px;
-      @include base.flex($wrap:wrap,$gap:30px, $justify:center, $align-items:center);
+      @include base.flex($gap:80px, $justify:center, $align-items:center);
       background-color: map-get(base.$bgColors, contrast);
 
       .us__text{
             @include base.flex($wrap:wrap, $justify:center, $gap:40px);
             padding: 50px;
+            @include base.applyFontStyles($weight:600);
       }
 
       .us__cards{
@@ -109,13 +112,13 @@
                   left: -3px;
                   width: calc(100% + 6px);
                   height: calc(100% + 6px);
-                  background: linear-gradient(45deg, #00FF8D, #24001B,#0A0124, yellow, purple);
+                  background: linear-gradient(45deg, #ff0088,#00FF8D, #c9fb00,#ff00dd, #00d9ff);
                   background-size: 400%;
-                  animation: colorbg 40s linear infinite;
+                  animation: colorbg 10s linear infinite;
                   z-index: -100;
             }
             &::before{
-                  filter: blur(8px);
+                  filter: blur(10px);
             }
             @keyframes colorbg {
                   0%{background-position: 0 0;}
@@ -137,7 +140,7 @@
                                           position: relative;
                                           padding: 20px;
                                           @include base.sizeBox($width:350px);
-                                          background-color: map-get(base.$bgColors, secundary);
+                                          background-color: map-get(base.$bgColors, contrast--opacity);
 
                                           .card__picture{
                                                 @include base.flex($justify:center);
@@ -168,10 +171,32 @@
 }
 
 @media (max-width: 1024px){
+      
+      .main__hero{
+            padding: 50px;
+      
+            &-content{
+                  @include base.flex($gap: 60px);
+                  @include base.glassMorph();
+                  padding: 10px;
+            }
+
       .main__us{
-            @include base.flex($wrap:wrap,$gap:100px, $justify:center, $align-items:center);
+            @include base.flex($wrap:wrap,$gap:0px, $justify:center, $align-items:center);
+            padding: 0;
+      }
+      }
+      
+      .main__us{
+            @include base.flex($wrap:wrap,$gap:40px, $justify:center, $align-items:center);
+            padding: 25px;
+
+            .us__text{
+                  padding: 20px;
+            }
       }
 }
+
 
 @media (max-width: 768px){
       .main{padding: 0;}

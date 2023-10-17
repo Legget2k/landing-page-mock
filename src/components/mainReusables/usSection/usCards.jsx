@@ -10,6 +10,7 @@ function UsCards({ employees }) {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
   };
 
   return (
