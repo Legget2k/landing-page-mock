@@ -25,8 +25,12 @@
             @include base.glassMorph();
             @include base.sizeBox($width:1600px);
             position: relative;
-            transform: translateY(100px);
+            transform: translateY(20px);
             padding: 85px 50px;
+
+            & > h2{
+                  color: map-get(base.$colors, secundary);
+            }
       }
 
       &-btns{

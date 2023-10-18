@@ -441,8 +441,11 @@ body .web-container {
   width: 1600px;
   height: auto;
   position: relative;
-  transform: translateY(100px);
+  transform: translateY(20px);
   padding: 85px 50px;
+}
+.main__hero-content > h2 {
+  color: #e1e1e1;
 }
 .main__hero-btns {
   display: flex;
