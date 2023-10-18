@@ -6,16 +6,16 @@ import PortraitExample from '../../../assets/examplePortrait.jpg';
 function UsSection() {
   const employees = [
     {
-      name: 'Rose Amalia',
-      role: 'Devop Senior',
+      name: 'Enyert Viñas',
+      role: 'tech founder',
       image: PortraitExample,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ullam doloribus, porro quasi repudiandae debitis et quos atque eligendi obcaecati quaerat maxime. At, illo voluptate odio sint amet doloribus iure.'
+      description: 'With many years of experience and a keen appreciation for the world of development, I aim to make this company a cornerstone of the gaming industry while also creating opportunities for emerging developers.'
     },
     {
       name: 'Luis Herrera',
-      role: 'Devop Senior',
+      role: 'development intern',
       image: PortraitExample,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ullam doloribus, porro quasi repudiandae debitis et quos atque eligendi obcaecati quaerat maxime. At, illo voluptate odio sint amet doloribus iure.'
+      description: "Since I was young, I've lived in front of a computer, passionate about the world of computer science, both hardware and software, with a strong desire to learn more and enhance my development skills"
     },
   ];
 
@@ -24,8 +24,7 @@ function UsSection() {
       <div className='us__text'>
         <h2>The team</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat dolorum laboriosam molestiae explicabo maiores fuga officiis corporis, commodi a qui obcaecati cum, ad nobis placeat, et laudantium optio voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque quidem ipsa natus incidunt nesciunt, animi magnam cumque rerum fugiat distinctio sint quibusdam similique molestias perferendis necessitatibus? Minus, aspernatur voluptatibus.
-          Ipsum aliquam, dolores rem ex quisquam nam? Non, nulla deserunt accusantium fugit officia incidunt dolorem? Eligendi alias repudiandae, libero temporibus voluptatum neque est distinctio quis laudantium obcaecati, laboriosam et necessitatibus?
+          We are a growing team in the process of forming a company dedicated to game development. Our initial goals involve offering a range of creative ideas and mechanics meticulously crafted in the game engine known as GODOT, with various broad and small-scale projects on the design board to deliver enjoyable and imaginative gameplay experiences. Our intention is to provide entertainment that encompasses all the elements of a great game, including music, storytelling, dynamic mechanics, and illustrated graphics to ensure it's engaging.
         </p>
       </div>
       <UsCards employees={employees} />

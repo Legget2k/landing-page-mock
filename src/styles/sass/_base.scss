@@ -234,6 +234,7 @@ h1,h2,h3,h4,h5,h6{
   text-align: center;
   user-select: none;
   text-shadow: $textShadow;
+  text-wrap: balance;
 }
 @for $i from 1 through 4{
   h#{$i} {
@@ -266,14 +267,21 @@ body{
       }
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
   @for $i from 1 through 4{
     h#{$i} {
-      @include applyFontStyles($font: secundary, $weight: 600, $style: italic, $color: primary,$size: 12px * (5 - $i));
+      @include applyFontStyles($font: secundary, $weight: 600, $style: italic, $color: primary,$size: 14px * (5 - $i));
     }
   }
 
   p{
     font-size: 1em;
+  }
+}
+@media (max-width: 768px){
+  @for $i from 1 through 4{
+    h#{$i} {
+      @include applyFontStyles($font: secundary, $weight: 600, $style: italic, $color: primary,$size: 12px * (5 - $i));
+    }
   }
 }

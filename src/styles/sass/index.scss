@@ -93,58 +93,60 @@
 
 .main__us{  
       max-width: 1600px;
-      padding: 50px;
-      @include base.flex($gap:80px, $justify:center, $align-items:center);
+      min-height: 900px;
+      @include base.flex($gap:100px, $justify:center, $align-items:center);
       background-color: map-get(base.$bgColors, contrast);
+      padding: 25px;
 
       .us__text{
             @include base.flex($wrap:wrap, $justify:center, $gap:40px);
-            padding: 50px;
             @include base.applyFontStyles($weight:600);
       }
 
       .us__cards{
             @include base.flex($justify:center);
             position: relative;
-            z-index: 100;
-
-            &::before,
-            &::after{
-                  content: '';
-                  position: absolute; 
-                  top: -3px;
-                  left: -3px;
-                  width: calc(100% + 6px);
-                  height: calc(100% + 6px);
-                  background: linear-gradient(45deg, #ff0088,#00FF8D, #c9fb00,#ff00dd, #00d9ff);
-                  background-size: 400%;
-                  animation: colorbg 10s linear infinite;
-                  z-index: -100;
-            }
-            &::before{
-                  filter: blur(10px);
-            }
-            @keyframes colorbg {
-                  0%{background-position: 0 0;}
-                  50%{background-position: 100% 0;}
-                  100%{background-position: 0 0;}
-            }
-
+            transform: translateX(-25px);
+            
             .slick-slider{
                   @include base.sizeBox($width:350px);
+                  z-index: 100;
 
+                  &::before,
+                  &::after{
+                        content: '';
+                        position: absolute; 
+                        top: -3px;
+                        left: -3px;
+                        width: calc(100% + 6px);
+                        height: calc(100% + 6px);
+                        background: linear-gradient(45deg, #ff0088,#00FF8D, #c9fb00,#ff00dd, #00d9ff);
+                        background-size: 400%;
+                        animation: colorbg 10s linear infinite;
+                        z-index: -100;
+                  }
+                  &::before{
+                        filter: blur(10px);
+                  }
+                  @keyframes colorbg {
+                        0%{background-position: 0 0;}
+                        50%{background-position: 100% 0;}
+                        100%{background-position: 0 0;}
+                  }
+                  
                   .slick-list{
-
+                        
                         .slick-track{
-
+                              
                               .slick-slide{
-
+                                    
                                     .card{
                                           @include base.flex($direction:column,$wrap:wrap, $align-items:center,);
                                           position: relative;
                                           padding: 20px;
                                           @include base.sizeBox($width:350px);
                                           background-color: map-get(base.$bgColors, contrast--opacity);
+                                          z-index: 100;
 
                                           .card__picture{
                                                 @include base.flex($justify:center);
@@ -164,7 +166,8 @@
 
                                           .card__info{
                                                 @include base.flex($wrap:wrap, $justify:center, $gap:20px);
-                                                margin: 20px;
+                                                margin: 0 20px;
+                                                min-height: 400px;
                                           }
                                     }
                               }
@@ -184,19 +187,33 @@
                   @include base.glassMorph();
                   padding: 10px;
             }
-
-      .main__us{
-            @include base.flex($wrap:wrap,$gap:0px, $justify:center, $align-items:center);
-            padding: 0;
-      }
       }
       
       .main__us{
-            @include base.flex($wrap:wrap,$gap:40px, $justify:center, $align-items:center);
+            @include base.flex($wrap:wrap,$gap:20px, $justify:center, $align-items:center);
             padding: 25px;
 
             .us__text{
+                  @include base.flex($gap:20px);
                   padding: 20px;
+            }
+
+            .us__cards{
+                  transform: translateX(0px);
+
+                  .slick-slider{
+                        .slick-list{
+                              .slick-track{
+                                    .slick-slide{
+                                          .card{
+                                                .card__info{
+                                                      min-height: 280px;
+                                                }
+                                          }                                 
+                                    }
+                              }
+                        }
+                  }
             }
       }
 }
@@ -213,6 +230,34 @@
                   .main__descriptive-text{
                         
                         border: none;
+                  }
+            }
+      }
+
+      .main__us{
+            @include base.flex($gap:0px);
+            padding: 0px;
+
+            .us__text{
+                  @include base.flex($gap:10px);
+                  padding: 10px;
+                  transform: translateY(-10px);
+            }
+
+            .us__cards{
+                  transform: translateY(-10px);
+                  .slick-slider{
+                        .slick-list{
+                              .slick-track{
+                                    .slick-slide{
+                                          .card{
+                                                .card__info{
+                                                      min-height: 250px;
+                                                }
+                                          }                                 
+                                    }
+                              }
+                        }
                   }
             }
       }

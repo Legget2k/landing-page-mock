@@ -113,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   user-select: none;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5019607843);
+  text-wrap: balance;
 }
 
 h1 {
@@ -183,6 +184,39 @@ body .web-container {
   height: auto;
 }
 
+@media (max-width: 1024px) {
+  h1 {
+    font-family: "Audiowide", serif;
+    color: #ff6d40;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 56px;
+  }
+  h2 {
+    font-family: "Audiowide", serif;
+    color: #ff6d40;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 42px;
+  }
+  h3 {
+    font-family: "Audiowide", serif;
+    color: #ff6d40;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 28px;
+  }
+  h4 {
+    font-family: "Audiowide", serif;
+    color: #ff6d40;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 14px;
+  }
+  p {
+    font-size: 1em;
+  }
+}
 @media (max-width: 768px) {
   h1 {
     font-family: "Audiowide", serif;
@@ -211,9 +245,6 @@ body .web-container {
     font-weight: 600;
     font-style: italic;
     font-size: 12px;
-  }
-  p {
-    font-size: 1em;
   }
 }
 /*sass index.scss ../css/main.css for transpilation*/
@@ -522,13 +553,14 @@ body .web-container {
 
 .main__us {
   max-width: 1600px;
-  padding: 50px;
+  min-height: 900px;
   display: flex;
-  gap: 80px;
+  gap: 100px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #09B064;
+  padding: 25px;
 }
 .main__us .us__text {
   display: flex;
@@ -536,7 +568,6 @@ body .web-container {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px;
   font-family: "Montserrat", serif;
   color: #e1e1e1;
   font-weight: 600;
@@ -549,9 +580,14 @@ body .web-container {
   flex-direction: row;
   justify-content: center;
   position: relative;
+  transform: translateX(-25px);
+}
+.main__us .us__cards .slick-slider {
+  width: 350px;
+  height: auto;
   z-index: 100;
 }
-.main__us .us__cards::before, .main__us .us__cards::after {
+.main__us .us__cards .slick-slider::before, .main__us .us__cards .slick-slider::after {
   content: "";
   position: absolute;
   top: -3px;
@@ -563,7 +599,7 @@ body .web-container {
   animation: colorbg 10s linear infinite;
   z-index: -100;
 }
-.main__us .us__cards::before {
+.main__us .us__cards .slick-slider::before {
   filter: blur(10px);
 }
 @keyframes colorbg {
@@ -577,10 +613,6 @@ body .web-container {
     background-position: 0 0;
   }
 }
-.main__us .us__cards .slick-slider {
-  width: 350px;
-  height: auto;
-}
 .main__us .us__cards .slick-slider .slick-list .slick-track .slick-slide .card {
   display: flex;
   gap: normal;
@@ -592,6 +624,7 @@ body .web-container {
   width: 350px;
   height: auto;
   background-color: rgba(9, 176, 101, 0.862745098);
+  z-index: 100;
 }
 .main__us .us__cards .slick-slider .slick-list .slick-track .slick-slide .card .card__picture {
   display: flex;
@@ -617,7 +650,8 @@ body .web-container {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 0 20px;
+  min-height: 400px;
 }
 
 @media (max-width: 1024px) {
@@ -634,18 +668,9 @@ body .web-container {
     backdrop-filter: blur(6px);
     padding: 10px;
   }
-  .main__hero .main__us {
-    display: flex;
-    gap: 0px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
-  }
   .main__us {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -653,7 +678,16 @@ body .web-container {
     padding: 25px;
   }
   .main__us .us__text {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
     padding: 20px;
+  }
+  .main__us .us__cards {
+    transform: translateX(0px);
+  }
+  .main__us .us__cards .slick-slider .slick-list .slick-track .slick-slide .card .card__info {
+    min-height: 280px;
   }
 }
 @media (max-width: 768px) {
@@ -667,6 +701,25 @@ body .web-container {
   }
   .main__descriptive .main__descriptive-entry .main__descriptive-text {
     border: none;
+  }
+  .main__us {
+    display: flex;
+    gap: 0px;
+    flex-direction: row;
+    padding: 0px;
+  }
+  .main__us .us__text {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    padding: 10px;
+    transform: translateY(-10px);
+  }
+  .main__us .us__cards {
+    transform: translateY(-10px);
+  }
+  .main__us .us__cards .slick-slider .slick-list .slick-track .slick-slide .card .card__info {
+    min-height: 250px;
   }
 }
 

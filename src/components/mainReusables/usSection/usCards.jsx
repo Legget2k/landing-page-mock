@@ -5,8 +5,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 function UsCards({ employees }) {
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
