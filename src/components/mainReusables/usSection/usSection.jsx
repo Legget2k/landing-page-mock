@@ -7,13 +7,13 @@ function UsSection() {
   const employees = [
     {
       name: 'Enyert Viñas',
-      role: 'tech founder',
+      role: 'CEO - Funder',
       image: PortraitExample,
       description: 'With many years of experience and a keen appreciation for the world of development, I aim to make this company a cornerstone of the gaming industry while also creating opportunities for emerging developers.'
     },
     {
       name: 'Luis Herrera',
-      role: 'development intern',
+      role: 'frontend developer',
       image: PortraitExample,
       description: "Since I was young, I've lived in front of a computer, passionate about the world of computer science, both hardware and software, with a strong desire to learn more and enhance my development skills"
     },

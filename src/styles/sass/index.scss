@@ -28,9 +28,8 @@
             transform: translateY(20px);
             padding: 85px 50px;
 
-            & > h2{
-                  color: map-get(base.$colors, secundary);
-            }
+            & > h1{font-size: 78px;}
+            & > h2{color: map-get(base.$colors, secundary);}
       }
 
       &-btns{
@@ -99,8 +98,11 @@
       padding: 25px;
 
       .us__text{
-            @include base.flex($wrap:wrap, $justify:center, $gap:40px);
+            @include base.flex($wrap:wrap,$gap:40px);
             @include base.applyFontStyles($weight:600);
+            & > h2{
+                  font-size: 64px;
+            }
       }
 
       .us__cards{
@@ -222,6 +224,16 @@
 @media (max-width: 768px){
       .main{padding: 0;}
 
+      .main__hero{
+      
+            &-content{
+
+                  & > h1{
+                        font-size: 58px;
+                  }
+            }
+      }
+
       .main__descriptive{
 
             .main__descriptive-entry{
@@ -239,9 +251,11 @@
             padding: 0px;
 
             .us__text{
-                  @include base.flex($gap:10px);
+                  @include base.flex($gap:10px, $justify: center);
                   padding: 10px;
                   transform: translateY(-10px);
+
+                  & > h2{font-size: 48px;}
             }
 
             .us__cards{

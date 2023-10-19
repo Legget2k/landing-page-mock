@@ -475,6 +475,9 @@ body .web-container {
   transform: translateY(20px);
   padding: 85px 50px;
 }
+.main__hero-content > h1 {
+  font-size: 78px;
+}
 .main__hero-content > h2 {
   color: #e1e1e1;
 }
@@ -566,13 +569,15 @@ body .web-container {
   display: flex;
   gap: 40px;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   font-family: "Montserrat", serif;
   color: #e1e1e1;
   font-weight: 600;
   font-style: normal;
   font-size: 1em;
+}
+.main__us .us__text > h2 {
+  font-size: 64px;
 }
 .main__us .us__cards {
   display: flex;
@@ -694,6 +699,9 @@ body .web-container {
   .main {
     padding: 0;
   }
+  .main__hero-content > h1 {
+    font-size: 58px;
+  }
   .main__descriptive .main__descriptive-entry {
     display: flex;
     gap: 40px;
@@ -712,8 +720,12 @@ body .web-container {
     display: flex;
     gap: 10px;
     flex-direction: row;
+    justify-content: center;
     padding: 10px;
     transform: translateY(-10px);
+  }
+  .main__us .us__text > h2 {
+    font-size: 48px;
   }
   .main__us .us__cards {
     transform: translateY(-10px);
